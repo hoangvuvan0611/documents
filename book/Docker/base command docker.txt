@@ -1,0 +1,9 @@
+base command docker:
+- docker images: show all image
+- docker build -t (image_name): build image form dockerfile
+- docker push : push to dockerhub
+- docker pull : pull from dockerhub
+- docker run -dp 8080(local):8080(container) --name (container_name) -v "$(pwd):/app" docker_image: build and run container
+- docker stop (container_name):
+- docker restart (container_name):
+- docker remove (container_name):

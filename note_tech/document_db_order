@@ -286,11 +286,11 @@
 - telecom_service_id: khóa tham chiếu tới TELECOM_SERVICE (suy luận theo tên cột)
 - status: trạng thái
 
-## ORD_SYS_CONFIG
+## ORD_SYS_CONFIG (bảng thông tin chứa cấu hình chung)
 - ID: khóa chính
-- code: mã
-- name: tên
-- value: 
+- code: mã cấu hình
+- name: tên cấu hình
+- value: giá trị cấu hình
 - status: trạng thái
 - create_date: thời gian tạo
 - create_user: người tạo
@@ -309,31 +309,31 @@
 - SUB_INFO_5: 
 - EVENT_TIME: thời gian
 
-## ORDER_CHARACTERISTIC
+## ORDER_CHARACTERISTIC  (bảng chứa thông tin chứa thông tin thuộc tính của đơn hàng)
 - ID: khóa chính
-- REFERENCE_ID: khóa tham chiếu
+- REFERENCE_ID: khóa tham chiếu tới ID của bảng thông tin sản phẩm PRODUCT_ORDER 
 - TYPE: 
 - NAME: tên
-- VALUE_TYPE: 
-- VALUE: 
+- VALUE_TYPE: kiểu dữ liệu
+- VALUE: giá trị
 - LONG_VALUE: 
 - STRING_VALUE: 
 - DATE_VALUE: 
 - DESCRIPTION: mô tả
-- QUANTITY: 
+- QUANTITY: số lượng
 - CREATE_USER: người tạo
 - CREATE_DATE: thời gian tạo
 - UPDATE_USER: người cập nhật
 - UPDATE_DATE: thời gian cập nhật
 - STATUS: trạng thái
-- ORDER_ID: khóa tham chiếu tới ORDERS (suy luận theo tên cột)
+- ORDER_ID: khóa tham chiếu tới BP_ID của bảng ORDERS
 - VALUE_DESC: mô tả
 
 ## ORDER_LOCK
 - ID: khóa chính
 - UNIQUE_KEY: 
-- ORDER_TYPE_ID: khóa tham chiếu tới ORDER_TYPE (suy luận theo tên cột)
-- BP_ID: khóa tham chiếu
+- ORDER_TYPE_ID: khóa tham chiếu tới ORDER_TYPE_ID của bảng ORDER_TYPE
+- BP_ID: Mã đơn hàng tham chiếu tới BP_ID của bảng ORDERS
 - CREATE_DATE: thời gian tạo
 - CREATE_USER: người tạo
 
@@ -341,7 +341,7 @@
 - FEE_ID: khóa tham chiếu
 - FEE_CODE: mã
 - FEE_NAME: tên
-- VALUE: 
+- VALUE: giá trị
 - STATUS: trạng thái
 - ORDER_TYPE_ID: khóa tham chiếu tới ORDER_TYPE (suy luận theo tên cột)
 - CREATE_DATE: thời gian tạo
@@ -351,54 +351,54 @@
 - SERVICE_TYPE: 
 - ONLY_FOR_VIEW: 
 
-## ORDER_ID_NO
+## ORDER_ID_NO (bảng chứa thông tin giấy tờ khách hàng của mỗi đơn hàng)
 - ID: khóa chính
-- ORDER_ID: khóa tham chiếu tới ORDERS (suy luận theo tên cột)
-- ID_NO: 
-- ID_TYPE: 
-- ISSUE_DATE: thời gian
-- ISSUED_PLACE: 
-- EXPIRED_DATE: thời gian
+- ORDER_ID: khóa tham chiếu tới BP_ID của bảng ORDERS
+- ID_NO: số giấy tờ
+- ID_TYPE: Loại giấy tờ
+- ISSUE_DATE: ngày cấp
+- ISSUED_PLACE: nơi cấp
+- EXPIRED_DATE: thời gian hết hạn
 - ORDER_CUSTOMER_ID: khóa tham chiếu tới ORDER_CUSTOMER (suy luận theo tên cột)
-- TYPE: 
+- TYPE: loại
 - STATUS: trạng thái
 - CREATE_USER: người tạo
 - CREATE_DATE: thời gian tạo
 - UPDATE_USER: người cập nhật
 - UPDATE_DATE: thời gian cập nhật
 
-## ORDER_FILE_UPLOAD
+## ORDER_FILE_UPLOAD (Bảng chứa thông tin file hồ sơ của đơn hàng SME)
 - ID: khóa chính
-- TYPE: 
-- FILE_CODE: mã
-- FILE_NAME: tên
-- CONTENT_OF_ARRAY: 
-- FULL_PATH_URL: 
-- CONTENT_TYPE: 
-- REFERENCE_ID: khóa tham chiếu
-- ORDER_ID: khóa tham chiếu tới ORDERS (suy luận theo tên cột)
+- TYPE: loại hồ sơ (ORDER_CUSTOMER - hồ sơ khách hàng, ORDER_SERVICE - hồ sơ dịch vụ, ORDER_SUBSCRIBER - hồ sơ thuê bao)
+- FILE_CODE: mã code của file
+- FILE_NAME: tên file
+- CONTENT_OF_ARRAY: giá trị by
+- FULL_PATH_URL: url của file
+- CONTENT_TYPE: định dạng hồ sơ
+- REFERENCE_ID: khóa tham chiếu tới ID của bảng ORDER_SUBSCRIBER
+- ORDER_ID: khóa tham chiếu tới BP_ID của bảng ORDERS
 - CREATE_USER: người tạo
 - CREATE_DATE: thời gian tạo
 - UPDATE_USER: người cập nhật
 - UPDATE_DATE: thời gian cập nhật
 - STATUS: trạng thái
-- RECORD_TYPE_ID: khóa tham chiếu
-- ACTION: 
-- SERVER: 
+- RECORD_TYPE_ID: thông tin id hồ sơ trả về từ hệ thống VContract hoặc mysign
+- ACTION: thông tin file đã thao tác (CREATE - tạo file, ACCEPT - tiếp nhận, UPDATE - cập nhật, SIGNED - đã ký)
+- SERVER: thông tin ip server của file
 - URL_MEDIA: 
-- URL: 
-- FILE_INFO: 
+- URL: đường dẫn file
+- FILE_INFO: chứa thông tin file (gồm thông tin đường dẫn, username, password, server ip đăng nhập hệ thống FTP)
 - SERVER_ID: khóa tham chiếu
-- PRESIGN_URL: 
-- SIGNATURE: 
+- PRESIGN_URL: thông tin presignUrl trên hệ thống S3
+- SIGNATURE: thông tin signature trên hệ thống S3
 - EXT_CODE: mã
 - SOURCE: 
 - IS_AI: cờ boolean/xử lý
 
-## PRODUCT_ORDER
+## PRODUCT_ORDER (bảng chứa thông tin sản phẩm/gói cước)
 - ID: khóa chính
-- ITEM_ID: khóa tham chiếu
-- BUNDLE: 
+- ITEM_ID: khóa tham chiếu tới thông tin ITEM_ID của bảng PRODUCT_ORDER_ITEM
+- BUNDLE: đánh dấu là sản phẩm bán kèm hay không
 - DESCRIPTION: mô tả
 - CREATE_USER: người tạo
 - CREATE_DATE: thời gian tạo

@@ -1,0 +1,4505 @@
+## V2_ACT_HI_PROCINST
+- ID_: 
+- PROC_INST_ID_: 
+
+## BP_STATE
+- ID: khóa chính
+- CODE: mã trạng thái của task trong luồng bpmn (duy nhất trong mỗi luồng bpmn)
+- NAME: tên trạng thái
+- STATUS: trạng thái
+- CREATE_DATE: thời gian tạo
+- CREATE_USER: người tạo
+- ORDER_TYPE_ID: khóa tham chiếu tới bảng ORDER_TYPE (suy luận theo tên cột)
+- UPDATE_DATE: thời gian cập nhật
+- UPDATE_USER: người cập nhật
+- PARTY_SYS: 
+- REQUEST_TOKEN: 
+- RESPONSE_TOKEN: 
+- REQUEST_METHOD: 
+- REQUEST_CODE: mã
+- TARGET: 
+
+## MAIL_CONTENT
+- ID: khóa chính
+- KEY: mã cho mỗi nội dung tin nhắn
+- DESCRIPTION: mô tả cho nội dung tin nhắn
+- CONTENT: nội dung của tin nhắn
+- NUM_PARAM_CONTENT: số lượng tham số
+- PARAM_DESC_CONTENT: mô tả tham số
+- RECEIVER: CUST - khách hàng, STAFF - Nhân viên
+- STATUS: trạng thái
+- CREATE_DATE: thời gian tạo
+- CREATE_USER: người tạo
+- UPDATE_DATE: thời gian cập nhật
+- UPDATE_USER: người cập nhật
+- SYSTEM_TYPE: hệ thống
+- LOG_ACTION: log mô tả tác động của message
+- ORDER_TYPE_CODE: mã loại đơn hàng
+- SUBJECT: 
+- NUM_PARAM_SUBJECT: số lượng tham số
+- PARAM_DESC_SUBJECT: mô tả tham số
+- TARGET: 
+
+## TELECOM_SERVICE (no use)
+- TELECOM_SERVICE_ID: khóa tham chiếu tới TELECOM_SERVICE (suy luận theo tên cột) - id của dịch vụ
+- NAME: tên
+- STATUS: trạng thái
+- DESCRIPTION: mô tả
+- SERVICE_ALIAS: 
+- CREATE_USER: người tạo
+- CREATE_DATETIME: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATETIME: thời gian cập nhật
+
+## CHARACTERISTIC_CONFIG (no use)
+- ID: khóa chính
+- NAME: tên
+- TELECOM_SERVICE_ID: khóa tham chiếu tới TELECOM_SERVICE (suy luận theo tên cột)
+- PHASE: 
+- SOURCE: 
+- REQUIRED: 
+- STATUS: trạng thái
+- ORDER_TYPE_ID: khóa tham chiếu tới ORDER_TYPE (suy luận theo tên cột)
+- DESCRIPTION: mô tả
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+
+## ORDER_CUST_CHARACTERISTIC (no use)
+- ID: khóa chính
+- NAME: tên
+- CUSTOMER_ID: khóa tham chiếu
+- VALUE_TYPE: 
+- VALUE: 
+- LONG_VALUE: 
+- STRING_VALUE: 
+- DATE_VALUE: 
+- DESCRIPTION: mô tả
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- STATUS: trạng thái
+
+## ORDERS_BRANDNAME_REPORT
+- ID: khóa chính
+- BP_ID: khóa tham chiếu
+- ISDN: số liên lạc
+- BRANDNAME: 
+- BRANDNAME_CALL_TYPE: 
+- CUST_NAME: tên
+- CUST_ADDRESS: địa chỉ
+- CUST_TYPE: 
+- PROVINCE_CODE: mã
+- DISTRICT_CODE: mã
+- PRECINCT_CODE: mã
+- PROVINCE_NAME: tên
+- DISTRICT_NAME: tên
+- PRECINCT_NAME: tên
+- CREATE_DATE: thời gian tạo
+- CREATE_USER: người tạo
+- HANDLE_SHOP: 
+- staffReceiveCode: 
+- staffApproveCode: 
+- TELECOM_SERVICE_ID: khóa tham chiếu tới TELECOM_SERVICE (suy luận theo tên cột)
+- PRODUCT_CODE: mã
+- HTHM_CODE: mã
+- PROMOTION_CODE: mã
+- VOICE_BRANDNAME_PRODUCT_CODE: mã
+- approveDate: thời gian
+- approveDesc: 
+- STATUS: trạng thái
+- approveResult: 
+- typeProfileIncorrect: 
+- numberOfApproval: 
+
+## ORDER_REQUEST_DETAIL
+- ID: khóa chính
+- REQUEST_ID: khóa tham chiếu
+- ITEM_ID: khóa tham chiếu
+- ORDER_ID: khóa tham chiếu tới ORDERS (suy luận theo tên cột)
+- ERROR_MSG: thông tin chi tiết request
+- ACTION_CODE: mã
+- TELECOM_SERVICE_ID: khóa tham chiếu tới TELECOM_SERVICE (suy luận theo tên cột)
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- ACCOUNT_ISDN: số lượng
+
+## ORDERS_REPORT
+- BP_ID: Mã đơn hàng tham chiếu tới ORDER_ID của bảng ORDERS
+- provinceCode: mã tỉnh
+- provinceName: tên tỉnh
+- districtCode: mã huyện
+- districtName: tên huyện
+- precinctCode: mã xã 
+- precinctName: tên xã
+- streetBlockCode: mã tổ dân phố
+- streetBlockName: tên tổ dân phố
+- detailAddress: địa chỉ chi tiết
+- transactionPlace: nơi đặt đơn 
+- planFromFirst: 
+- planToFirst: 
+- handleShopFirst: 
+- shopCodeFirst: 
+- PLAN_FROM_1: 
+- PLAN_TO_1: 
+- HANDLE_SHOP_1: 
+- SHOP_CODE_1: 
+- PLAN_FROM_2: 
+- PLAN_TO_2: 
+- HANDLE_SHOP_2: 
+- SHOP_CODE_2: 
+- HPC_TIME: thời gian
+- HPC_RESULT: 
+- HPC_STATUS: trạng thái
+- OPERATING_LEVEL: 
+- MO_STAFF_ID: khóa tham chiếu
+- MO_STAFF_TEL: số liên lạc
+- MO_START_TIME: thời gian
+- MO_DONE_TIME: thời gian
+- MO_STATUS: trạng thái
+- MO_RESULT: 
+- CO_STAFF_ID: khóa tham chiếu
+- CO_STAFF_TEL: số liên lạc
+- CO_START_TIME: thời gian
+- CO_DONE_TIME: thời gian
+- CO_STATUS: trạng thái
+- CO_RESULT: 
+- BO_STAFF_ID: khóa tham chiếu
+- BO_STAFF_TEL: số liên lạc
+- BO_START_TIME: thời gian
+- BO_DONE_TIME: thời gian
+- BO_STATUS: trạng thái
+- BO_RESULT: 
+- VO_STAFF_ID: khóa tham chiếu
+- VO_STAFF_TEL: số liên lạc
+- VO_START_TIME: thời gian
+- VO_DONE_TIME: thời gian
+- VO_STATUS: trạng thái
+- VO_RESULT: 
+- DURATION_UNTIL_HPC: 
+- EXTEND_TIME: thời gian
+- EXTEND_REASON: 
+- EXTEND_REASON_DETAIL: 
+- TOTAL_TIME_PROCESS: giá trị/tiền
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- COLL_PROCESS_STATUS: trạng thái
+- CANCEL_REASON: Lý do hủy
+- CANCEL_REASON_DETAIL: mô tả chi tiết lý do hủy
+- PRODUCT_CODE: mã gói cước
+- shopId: id cửa hàng tham chiếu tới SHOP_ID của table SHOP 
+- staffId: id nhân viên
+- CANCEL_USER: 
+- IS_SPECIAL_NUMBER: cờ boolean/xử lý
+- PRIVILEGE_LEVEL: 
+- PROCESS_HISTORY: thông tin log lịch sử đơn hàng được ghi vào
+- OPERATING_HISTORY: 
+- FL_TELECOM_SERVICE: số liên lạc
+- EXTEND_1: 
+- EXTEND_2: 
+- EXTEND_3: 
+- EXTEND_4: 
+- EXTEND_5: 
+- EXTEND_6: 
+- EXTEND_7: 
+- EXTEND_8: 
+- EXTEND_9: 
+- EXTEND_10: 
+- EXTEND_11: 
+- EXTEND_12: 
+- EXTEND_13: 
+- EXTEND_14: 
+- EXTEND_15: 
+- EXTEND_16: 
+- EXTEND_17: 
+- EXTEND_18: 
+- EXTEND_19: 
+- EXTEND_20: 
+- SPECIAL_1: 
+- SPECIAL_2: 
+- SPECIAL_3: 
+- SPECIAL_4: 
+- SPECIAL_5: 
+- SPECIAL_6: 
+- SPECIAL_7: 
+- SPECIAL_8: 
+- SPECIAL_9: 
+- SPECIAL_10: 
+- BO_PERFORM_USER: 
+
+## MAP_AREA_PARTNER (no use)
+- ID: khóa chính
+- AREA_ID: khóa tham chiếu tới AREA (suy luận theo tên cột)
+- AREA_CODE: mã
+- PARTNER_CODE: mã
+- PARTNER_NAME: tên
+- AREA_PARTNER_ID: khóa tham chiếu
+- AREA_PARTNER_CODE: mã
+- STATUS: trạng thái
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+
+## PARTNER_TRANS_CODE - bảng lưu thông tin mã giao dịch đối tác khi tạo đơn sẽ truyền vào của từng đơn hàng
+- ID: khóa chính
+- TRANS_CODE: mã duy nhất mỗi đơn hàng sẽ truyền vào
+- BP_ID: Mã đơn hàng tham chiếu tới ORDER_ID của bảng ORDERS
+- STATE: trạng thái
+- ERROR_MSG: 
+- PARTNER_CODE: Hệ thống tạo đơn 
+- CREATE_USE: 
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- REQUEST_ID: 
+- REQUEST_TIME: thời gian
+
+## ORDER_PROMOTION
+- ID: khóa chính
+- ORDER_ID: khóa tham chiếu tới ORDERS (suy luận theo tên cột)
+- VOUCHER_CODE: mã
+- VOUCHER_TYPE_CODE: mã
+- PROMOTION_CODE: mã
+- PROMOTION_CONDITION: 
+- PROMOTION_DESC: mô tả
+- PROMOTION_INFO: 
+- STATUS: trạng thái
+- CREATE_DATE: thời gian tạo
+- CREATE_USER: người tạo
+- LAST_UPDATE: thời gian
+- UPDATE_USER: người cập nhật
+
+## PRICING_CONFIG
+- service_id: khóa tham chiếu
+- price_participant: giá trị/tiền
+- discount: số lượng
+- note: ghi chú
+- discount_amount: số lượng
+- business_code: mã
+- telecom_service_id: khóa tham chiếu tới TELECOM_SERVICE (suy luận theo tên cột)
+- status: trạng thái
+
+## ORD_SYS_CONFIG (bảng thông tin chứa cấu hình chung)
+- ID: khóa chính
+- code: mã cấu hình
+- name: tên cấu hình
+- value: giá trị cấu hình
+- status: trạng thái
+- create_date: thời gian tạo
+- create_user: người tạo
+- last_update_date: thời gian cập nhật
+- last_update_user: 
+
+## ORDER_EVENT_LOG
+- ID: khóa chính
+- BP_ID: khóa tham chiếu
+- EVENT_CODE: mã
+- DESCRIPTION: mô tả
+- SUB_INFO_1: 
+- SUB_INFO_2: 
+- SUB_INFO_3: 
+- SUB_INFO_4: 
+- SUB_INFO_5: 
+- EVENT_TIME: thời gian
+
+## ORDER_CHARACTERISTIC  (bảng chứa thông tin chứa thông tin thuộc tính của đơn hàng)
+- ID: khóa chính
+- REFERENCE_ID: khóa tham chiếu tới ID của bảng thông tin sản phẩm PRODUCT_ORDER 
+- TYPE: 
+- NAME: tên
+- VALUE_TYPE: kiểu dữ liệu
+- VALUE: giá trị
+- LONG_VALUE: 
+- STRING_VALUE: 
+- DATE_VALUE: 
+- DESCRIPTION: mô tả
+- QUANTITY: số lượng
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- STATUS: trạng thái
+- ORDER_ID: khóa tham chiếu tới BP_ID của bảng ORDERS
+- VALUE_DESC: mô tả
+
+## ORDER_LOCK
+- ID: khóa chính
+- UNIQUE_KEY: 
+- ORDER_TYPE_ID: khóa tham chiếu tới ORDER_TYPE_ID của bảng ORDER_TYPE
+- BP_ID: Mã đơn hàng tham chiếu tới BP_ID của bảng ORDERS
+- CREATE_DATE: thời gian tạo
+- CREATE_USER: người tạo
+
+## ORDER_FEE
+- FEE_ID: khóa tham chiếu
+- FEE_CODE: mã
+- FEE_NAME: tên
+- VALUE: giá trị
+- STATUS: trạng thái
+- ORDER_TYPE_ID: khóa tham chiếu tới ORDER_TYPE (suy luận theo tên cột)
+- CREATE_DATE: thời gian tạo
+- CREATE_USER: người tạo
+- UPDATE_DATE: thời gian cập nhật
+- UPDATE_USER: người cập nhật
+- SERVICE_TYPE: 
+- ONLY_FOR_VIEW: 
+
+## ORDER_ID_NO (bảng chứa thông tin giấy tờ khách hàng của mỗi đơn hàng)
+- ID: khóa chính
+- ORDER_ID: khóa tham chiếu tới BP_ID của bảng ORDERS
+- ID_NO: số giấy tờ
+- ID_TYPE: Loại giấy tờ
+- ISSUE_DATE: ngày cấp
+- ISSUED_PLACE: nơi cấp
+- EXPIRED_DATE: thời gian hết hạn
+- ORDER_CUSTOMER_ID: khóa tham chiếu tới ORDER_CUSTOMER (suy luận theo tên cột)
+- TYPE: loại
+- STATUS: trạng thái
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+
+## ORDER_FILE_UPLOAD (Bảng chứa thông tin file hồ sơ của đơn hàng SME)
+- ID: khóa chính
+- TYPE: loại hồ sơ (ORDER_CUSTOMER - hồ sơ khách hàng, ORDER_SERVICE - hồ sơ dịch vụ, ORDER_SUBSCRIBER - hồ sơ thuê bao)
+- FILE_CODE: mã code của file
+- FILE_NAME: tên file
+- CONTENT_OF_ARRAY: giá trị by
+- FULL_PATH_URL: url của file
+- CONTENT_TYPE: định dạng hồ sơ
+- REFERENCE_ID: khóa tham chiếu tới ID của bảng ORDER_SUBSCRIBER
+- ORDER_ID: khóa tham chiếu tới BP_ID của bảng ORDERS
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- STATUS: trạng thái
+- RECORD_TYPE_ID: thông tin id hồ sơ trả về từ hệ thống VContract hoặc mysign
+- ACTION: thông tin file đã thao tác (CREATE - tạo file, ACCEPT - tiếp nhận, UPDATE - cập nhật, SIGNED - đã ký)
+- SERVER: thông tin ip server của file
+- URL_MEDIA: 
+- URL: đường dẫn file
+- FILE_INFO: chứa thông tin file (gồm thông tin đường dẫn, username, password, server ip đăng nhập hệ thống FTP)
+- SERVER_ID: khóa tham chiếu
+- PRESIGN_URL: thông tin presignUrl trên hệ thống S3
+- SIGNATURE: thông tin signature trên hệ thống S3
+- EXT_CODE: mã
+- SOURCE: 
+- IS_AI: cờ boolean/xử lý
+
+## PRODUCT_ORDER (bảng chứa thông tin sản phẩm/gói cước)
+- ID: khóa chính
+- ITEM_ID: khóa tham chiếu tới thông tin ITEM_ID của bảng PRODUCT_ORDER_ITEM
+- BUNDLE: đánh dấu là sản phẩm bán kèm hay không
+- DESCRIPTION: mô tả
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- STATUS: trạng thái
+
+## STAFF_TABLE
+- id: khóa chính
+- staff_id: khóa tham chiếu tới STAFF (suy luận theo tên cột)
+- table_name: tên
+- create_date: thời gian tạo
+- create_user: người tạo
+- avatar: 
+
+## CAMEL_REST_REQUEST_CFG
+- ID: khóa chính
+- CONFIG_ID: khóa tham chiếu
+- METHOD_REQUEST: 
+- NAME: tên
+- DESCRIPTION: mô tả
+- URI_TEMPLATE: 
+- RESPONSE_EXPECTED: 
+- REQUEST_TEMPLATE: 
+- HEADER_CONFIG: 
+- PATH_TEMPLATE: 
+- QUERY_TEMPLATE: 
+- ERROR_MESSAGE_CFG: 
+- EXTERNAL_CONFIG_CAMEL: 
+- REQUEST_CODE: mã
+- STATUS: trạng thái
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+
+## CAMEL_SOAP_REQUEST_CFG
+- ID: khóa chính
+- NAME: tên
+- REQUEST_TEMPLATE: 
+- SERVICE_URI: 
+- URI_DIRECT: 
+- ERROR_MESSAGE: 
+- RESPONSE_EXPECTED: 
+- REQUEST_CODE: mã
+- CONNECTION_TIMEOUT: 
+- REQUEST_TIMEOUT: 
+- STATUS: trạng thái
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+
+## ORDER_SUPPORT
+- id: khóa chính
+- ORDER_TYPE_ID: khóa tham chiếu tới ORDER_TYPE (suy luận theo tên cột)
+- BP_ID: khóa tham chiếu
+- BP_STATE: trạng thái
+- RETRIES: 
+- STATE: trạng thái
+- CREATE_DATE: thời gian tạo
+- UPDATE_DATE: thời gian cập nhật
+- LOGS: 
+
+## ORDERS_EXT
+- ID: khóa chính
+- BP_ID: khóa tham chiếu
+- EXT_KEY: 
+- EXT_VALUE: 
+- STATUS: trạng thái
+- CREATE_DATE: thời gian tạo
+- CREATE_USER: người tạo
+- LAST_UPDATE: thời gian
+- UPDATE_USER: người cập nhật
+- ORDER_CREATE_DATE: thời gian tạo
+
+## MAP_PRODUCT_PARTNER
+- ID: khóa chính
+- PROD_OFFER_ID: khóa tham chiếu
+- PROD_OFFER_CODE: mã
+- QRCODE_QUANTITY: 
+- PREPAID_MONTH_QUANTITY: 
+- PARTNER_CODE: mã
+- PARTNER_OFFER_ID: khóa tham chiếu
+- PARTNER_OFFER_CODE: mã
+- STATUS: trạng thái
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- TRIAL_DURATION: 
+
+## SEND_MAIL
+- ID: khóa chính
+- TYPE: 
+- CREATE_DATE: thời gian tạo
+- PROCESS_DATE: thời gian
+- MESSAGE: 
+- SUBJECT: 
+- STATUS: trạng thái
+- RESULT: 
+- ADDRESS: địa chỉ
+- RETRY: 
+- BP_ID: khóa tham chiếu
+- FILE_NAME: tên
+
+## ORDER_CUSTOMER
+- ID: khóa chính
+- CUSTOMER_ID: khóa tham chiếu
+- ORDER_ID: khóa tham chiếu tới ORDERS (suy luận theo tên cột)
+- REPRESENTATIVE_CUST_ID: khóa tham chiếu
+- CUSTOMER_INFO: 
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- STATE: trạng thái
+- ITEM_ID: khóa tham chiếu
+
+## SHOP
+- SHOP_ID: khóa tham chiếu tới SHOP (suy luận theo tên cột)
+- NAME: tên
+- PARENT_SHOP_ID: khóa tham chiếu
+- account: số lượng
+- BANK_NAME: tên
+- ADDRESS: địa chỉ
+- TEL: số liên lạc
+- FAX: 
+- SHOP_CODE: mã
+- SHOP_TYPE: 
+- CONTACT_NAME: tên
+- CONTACT_TITLE: 
+- TEL_NUMBER: số liên lạc
+- EMAIL: email
+- DESCRIPTION: mô tả
+- PROVINCE: 
+- PAR_SHOP_CODE: mã
+- CENTER_CODE: mã
+- OLD_SHOP_CODE: mã
+- COMPANY: 
+- TIN: 
+- SHOP: 
+- PROVINCE_CODE: mã
+- CREATE_DATE: thời gian tạo
+- CHANNEL_TYPE_ID: khóa tham chiếu
+- DISCOUNT_POLICY: số lượng
+- PRICE_POLICY: giá trị/tiền
+- STATUS: trạng thái
+- SHOP_PATH: 
+- DISTRICT: 
+- PRECINCT: 
+- AREA_CODE: mã
+- STREET_BLOCK: 
+- STREET: 
+- HOME: 
+
+## ORDER_SERVICE_ITEM
+- ID: khóa chính
+- ACCOUNT_ID: số lượng
+- ORDER_ID: khóa tham chiếu tới ORDERS (suy luận theo tên cột)
+- CONTRACT_INFO: 
+- TELECOM_SERVICE_ID: khóa tham chiếu tới TELECOM_SERVICE (suy luận theo tên cột)
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- STATE: trạng thái
+
+## MAP_STAFF_GROUP
+- ID: khóa chính
+- STAFF_ID: khóa tham chiếu tới STAFF (suy luận theo tên cột)
+- GROUP_ID: khóa tham chiếu
+- CREATE_DATE: thời gian tạo
+- CREATE_USER: người tạo
+- STATUS: trạng thái
+- UPDATE_DATE: thời gian cập nhật
+- UPDATE_USER: người cập nhật
+
+## CAMEL_REST_CFG
+- ID: khóa chính
+- CODE_CFG: 
+- HOST_CFG: 
+- PORT_CFG: 
+- SCHEME_CFG: 
+- HEADER_CONFIG: 
+- EXTERNAL_CONFIG_CAMEL: 
+
+## MAP_STAFF_AREA
+- ID: khóa chính
+- STAFF_ID: khóa tham chiếu tới STAFF (suy luận theo tên cột)
+- PROVINCE_CODE: mã
+- DISTRICT_CODE: mã
+- PRECINCT_CODE: mã
+- STREET_BLOCK_CODE: mã
+- STATUS: trạng thái
+- CREATE_DATE: thời gian tạo
+- CREATE_USER: người tạo
+- LAST_UPDATE: thời gian
+- UPDATE_USER: người cập nhật
+- CONTACT_ISDN: số liên lạc
+
+## OPTION_SET_VALUE
+- ID: khóa chính
+- OPTION_SET_ID: khóa tham chiếu
+- CODE: mã
+- VALUE: 
+- STATUS: trạng thái
+- DISPLAY_ORDER: 
+- DESCRIPTION: mô tả
+- CREATE_DATE: thời gian tạo
+- UPDATE_DATE: thời gian cập nhật
+- CREATE_USER: người tạo
+- UPDATE_USER: người cập nhật
+
+## SEND_SMS
+- ID: khóa chính
+- ISDN: số liên lạc
+- CONTENT: nội dung
+- STATUS: trạng thái
+- ERROR: 
+- CREATE_DATE: thời gian tạo
+- BP_ID: khóa tham chiếu
+- ALIAS: 
+- CP_CODE: mã
+
+## AREA
+- area_code: mã
+- province: 
+- district: 
+- precinct: 
+- name: tên
+- street_block: 
+- full_name: tên
+- status: trạng thái
+
+## ORDER_SUBSCRIBER
+- ID: khóa chính
+- SUBSCRIBER_ID: khóa tham chiếu
+- THIRD_PARTY_SUBSCRIBER: 
+- ITEM_ID: khóa tham chiếu
+- ORDER_ID: khóa tham chiếu tới ORDERS (suy luận theo tên cột)
+- SUBSCRIBER_INFO: 
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- STATE: trạng thái
+
+## ORDERS_FILE
+- ID: khóa chính
+- BP_ID: khóa tham chiếu
+- FILE_CODE: mã
+- DESCRIPTION: mô tả
+- CONTENT: nội dung
+- BCONTENT: 
+- EXTENSION: 
+- STATUS: trạng thái
+- CREATE_DATE: thời gian tạo
+- CREATE_USER: người tạo
+- UPDATE_DATE: thời gian cập nhật
+- UPDATE_USER: người cập nhật
+
+## ORDER_PRICE_ALT
+- ID: khóa chính
+- NAME_FOR_DISPLAY: 
+- NAME_FOR_INVOICE: 
+- PRICE: giá trị/tiền
+- VAT: 
+- ITEM_ID: khóa tham chiếu
+- ORDER_ID: khóa tham chiếu tới ORDERS (suy luận theo tên cột)
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- STATUS: trạng thái
+
+## V2_ACT_HI_VARINST
+- ID_: 
+- PROC_INST_ID_: 
+- NAME_: 
+- LONG_: 
+- TEXT_: 
+
+## ORDER_CLAIM
+- ID: khóa chính
+- BP_ID: khóa tham chiếu
+- CLAIM_ISDN: số liên lạc
+- CLAIM_CUST_NAME: tên
+- CONTENT: nội dung
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_DATE: thời gian cập nhật
+- UPDATE_USER: người cập nhật
+- STATUS: trạng thái
+- HANDLING_STAFF: 
+- ID_BO: 
+
+## ORDER_PRICE
+- ID: khóa chính
+- NAME_FOR_DISPLAY: 
+- NAME_FOR_INVOICE: 
+- PRODUCT_OFFER_PRICE_ID: khóa tham chiếu
+- ORIGINAL_PRICE: giá trị/tiền
+- PRICE: giá trị/tiền
+- DISCOUNT: số lượng
+- VAT: 
+- ITEM_ID: khóa tham chiếu
+- ORDER_ID: khóa tham chiếu tới ORDERS (suy luận theo tên cột)
+- TYPE: 
+- UNIT_NAME: tên
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- STATUS: trạng thái
+- QUANTITY: 
+- PRICE_TYPE_CODE: mã
+- TYPE_INVOICE: 
+- UNIT_PRICE: giá trị/tiền
+
+## ORDERS
+- bp_id: khóa tham chiếu
+- bp_state: trạng thái
+- order_type_id: khóa tham chiếu tới ORDER_TYPE (suy luận theo tên cột)
+- code: mã
+- ext_code: mã
+- state: trạng thái
+- data: 
+- cust_name: tên
+- id_no: 
+- cust_isdn: số liên lạc
+- contact_isdn: số liên lạc
+- isdn: số liên lạc
+- shop_id: khóa tham chiếu tới SHOP (suy luận theo tên cột)
+- staff_id: khóa tham chiếu tới STAFF (suy luận theo tên cột)
+- counter_per_day: số lượng
+- checkin_date: thời gian
+- plan_from: thời điểm bắt đầu
+- plan_to: thời điểm kết thúc
+- complete_date: thời gian
+- create_date: thời gian tạo
+- update_date: thời gian cập nhật
+- pay_status: trạng thái
+- error: 
+- request_bankplus_id: khóa tham chiếu
+- execution_id: khóa tham chiếu
+- pay_method: 
+- pay_type: 
+- target: 
+- create_user: người tạo
+- create_user_code: mã
+- system_type: 
+- parse_data_flag: cờ boolean/xử lý
+- parse_process_flag: cờ boolean/xử lý
+- parent_bp_id: khóa tham chiếu
+- PRODUCT_ORDER_ITEM_ID: khóa tham chiếu tới PRODUCT_ORDER_ITEM (suy luận theo tên cột)
+- ORDER_CUST_ID: khóa tham chiếu
+
+## PRODUCT_ORDER_ITEM
+- ITEM_ID: khóa tham chiếu
+- ID: khóa chính
+- ORDER_ID: khóa tham chiếu tới ORDERS (suy luận theo tên cột)
+- QUANTITY: 
+- ACTION: 
+- STATE: trạng thái
+- PRODUCT_OFFERING_ID: khóa tham chiếu
+- PRODUCT_OFFERING_CODE: mã
+- PRODUCT_OFFERING_NAME: tên
+- TELECOM_SERVICE_ID: khóa tham chiếu tới TELECOM_SERVICE (suy luận theo tên cột)
+- REVENUE_STATE: trạng thái
+- INVOICE_STATE: trạng thái
+- SALE_TRANS_ID: khóa tham chiếu
+- INVOICE_ID: khóa tham chiếu
+- PROCESS_ERROR: 
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- PROCESS_ID: khóa tham chiếu
+- ITEM_TYPE: 
+
+## STAFF
+- STAFF_ID: khóa tham chiếu tới STAFF (suy luận theo tên cột)
+- SHOP_ID: khóa tham chiếu tới SHOP (suy luận theo tên cột)
+- STAFF_CODE: mã
+- NAME: tên
+- STATUS: trạng thái
+- BIRTHDAY: 
+- ID_NO: 
+- ID_ISSUE_PLACE: 
+- ID_ISSUE_DATE: thời gian
+- TEL: số liên lạc
+- TYPE: 
+- SERIAL: 
+- ISDN: số liên lạc
+- PIN: 
+- ADDRESS: địa chỉ
+- PROVINCE: 
+- STAFF_OWN_TYPE: 
+- STAFF_OWNER_ID: khóa tham chiếu
+- CHANNEL_TYPE_ID: khóa tham chiếu
+- PRICE_POLICY: giá trị/tiền
+- DISCOUNT_POLICY: số lượng
+- POINT_OF_SALE: 
+- LOCK_STATUS: trạng thái
+- LAST_LOCK_TIME: thời gian
+- IMSI: 
+- PAYMENT_LIMIT: 
+- PAYMENT_USAGE: 
+- NOTE: ghi chú
+- BUSINESS_METHOD: 
+- CONTRACT_METHOD: 
+- HAS_EQUIPMENT: 
+- HAS_TIN: 
+- TIN: 
+- DISTRICT: 
+- PRECINCT: 
+- AREA_CODE: mã
+- STREET_BLOCK: 
+- STREET: 
+- HOME: 
+- STOCK_NUM_IMP: số lượng
+- STOCK_NUM: 
+- POINT_OF_SALE_TYPE: 
+- TTNS_CODE: mã
+- REGISTER_INFO: 
+- ID_TYPE: 
+- LOCK_FLAG: cờ boolean/xử lý
+- WARNING_CONTENT: nội dung
+- CONTRACT_NO: 
+- CONTRACT_FROM_DATE: thời gian
+- CONTRACT_TO_DATE: thời gian
+- DEPOSIT_VALUE: 
+- BTS_CODE: mã
+- FILE_NAME: tên
+- BANKPLUS_MOBILE: số liên lạc
+- email: email
+- BUSINESS_LICENCE: 
+- SUB_OWNER_TYPE: 
+- SUB_OWNER_ID: khóa tham chiếu
+- LAST_MODIFIED: 
+- SHOP_OWNER_ID: khóa tham chiếu
+- USER_ID: khóa tham chiếu
+- TENANT_ID: khóa tham chiếu
+
+## PRODUCT_RELATIONSHIP
+- ID: khóa chính
+- PRODUCT_ORDER_ID: khóa tham chiếu tới PRODUCT_ORDER (suy luận theo tên cột)
+- RELATION_ITEM_ID: khóa tham chiếu
+- RELATION_TYPE: 
+- PRODUCT_RELATION_ID: khóa tham chiếu
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- STATUS: trạng thái
+
+## V2_ACT_RU_DEAD_LETTER_JOB
+- ID_: 
+- REV_: 
+- TYPE_: 
+- EXCLUSIVE_: 
+- EXECUTION_ID_: 
+- PROCESS_INSTANCE_ID_: 
+- PROC_DEF_ID_: 
+- EXCEPTION_STACK_ID_: 
+- EXCEPTION_MSG_: 
+- DUEDATE_: 
+- REPEAT_: 
+- HANDLER_TYPE_: 
+- HANDLER_CFG_: 
+- TENANT_ID_: 
+
+## bp_state_action
+- id: khóa chính
+- order_type_id: khóa tham chiếu tới ORDER_TYPE (suy luận theo tên cột)
+- bp_state: trạng thái
+- pay_status: trạng thái
+- action: 
+- status: trạng thái
+- create_date: thời gian tạo
+- create_user: người tạo
+- pay_method: 
+- update_date: thời gian cập nhật
+- update_user: người cập nhật
+
+## SMS_CONTENT
+- ID: khóa chính
+- KEY: 
+- DESCRIPTION: mô tả
+- CONTENT: nội dung
+- NUM_PARAM: số lượng tham số
+- PARAM_DESCRIPTION: mô tả tham số
+- RECEIVER: 
+- STATUS: trạng thái
+- CREATE_DATE: thời gian tạo
+- CREATE_USER: người tạo
+- UPDATE_DATE: thời gian cập nhật
+- UPDATE_USER: người cập nhật
+- TARGET: 
+- SYSTEM_TYPE: 
+- LOG_ACTION: 
+
+## ORD_OPTION_SET
+- OPTION_SET_ID: khóa tham chiếu
+- CODE: mã
+- NAME: tên
+- STATUS: trạng thái
+- DESCRIPTION: mô tả
+- CREATE_DATE: thời gian tạo
+- UPDATE_DATE: thời gian cập nhật
+- CREATE_USER: người tạo
+- UPDATE_USER: người cập nhật
+
+## ORDER_TYPE_EXT
+- ID: khóa chính
+- ORDER_TYPE_ID: khóa tham chiếu tới ORDER_TYPE (suy luận theo tên cột)
+- EXT_KEY: 
+- EXT_VALUE: 
+- STATUS: trạng thái
+- CREATE_DATE: thời gian tạo
+- CREATE_USER: người tạo
+- LAST_UPDATE: thời gian
+- UPDATE_USER: người cập nhật
+
+## ORDER_TYPE
+- order_type_id: khóa tham chiếu tới ORDER_TYPE (suy luận theo tên cột)
+- code: mã
+- pri_code: mã
+- name: tên
+- status: trạng thái
+- bp_code: mã
+- bp_code_at_shop: 
+- bp_code_hsdt: 
+- bp_code_hotline: 
+- create_date: thời gian tạo
+- update_date: thời gian cập nhật
+- create_user: người tạo
+- update_user: người cập nhật
+- type: 
+- action_product: 
+
+## ORDER_REQUEST
+- ID: khóa chính
+- ORDER_ID: khóa tham chiếu tới ORDERS (suy luận theo tên cột)
+- ORDER_TYPE_ID: khóa tham chiếu tới ORDER_TYPE (suy luận theo tên cột)
+- DATA: 
+- EXT_CODE: mã
+- STATE: trạng thái
+- ERROR_MSG: 
+- STATUS: trạng thái
+- CREATE_DATE: thời gian tạo
+- CREATE_USER: người tạo
+- UPDATE_DATE: thời gian cập nhật
+- UPDATE_USER: người cập nhật
+
+## ORDERS_REPORT_HSDT_SME
+- BP_ID: khóa tham chiếu
+- PRODUCT_CODE: mã
+- PRODUCT_NAME: tên
+- TELECOM_SERVICE_ID: khóa tham chiếu tới TELECOM_SERVICE (suy luận theo tên cột)
+- TELECOM_SERVICE_NAME: tên
+- ORDER_TYPE_ID: khóa tham chiếu tới ORDER_TYPE (suy luận theo tên cột)
+- ORDER_TYPE_NAME: tên
+- STAFF_EXECUTE_ID: khóa tham chiếu
+- STAFF_EXECUTE_NAME: tên
+- STAFF_EXECUTE_PROVINCE_CODE: mã
+- SHOP_ID: khóa tham chiếu tới SHOP (suy luận theo tên cột)
+- CUST_TYPE: 
+- CUST_GROUP_NAME: tên
+- idNo: 
+- CUST_NAME: tên
+- ISDN: số liên lạc
+- state: trạng thái
+- STATUS: trạng thái
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+- TRANSACTION_PLACE: 
+- PROVINCE_CODE: mã
+- DISTRICT_CODE: mã
+- PRECINCT_CODE: mã
+- STREET_BLOCK_CODE: mã
+
+## TELECOM_SERVICE_PARTNER
+- ID: khóa chính
+- TELECOM_SERVICE_ID: khóa tham chiếu tới TELECOM_SERVICE (suy luận theo tên cột)
+- PARTNER_SERVICE_ID: khóa tham chiếu
+- PARTNER_SERVICE_CODE: mã
+- PARTNER_CODE: mã
+- PARTNER_NAME: tên
+- STATUS: trạng thái
+
+## RECEIVE_APPROVE_HISTORY
+- ID: khóa chính
+- BP_ID: khóa tham chiếu
+- STAFF_CODE: mã
+- RESULT: 
+- DESCRIPTION: mô tả
+- CREATE_DATE: thời gian tạo
+- BP_STATE: trạng thái
+
+## ORDER_CFG_BP_STATE
+- ID: khóa chính
+- ORDER_TYPE_ID: khóa tham chiếu tới ORDER_TYPE (suy luận theo tên cột)
+- BP_STATE: trạng thái
+- CF_BP_STATE: trạng thái
+- CF_BP_STATE_NAME: tên
+- CF_BP_STATE_FINAL: trạng thái
+- CREATE_DATE: thời gian tạo
+- UPDATE_DATE: thời gian cập nhật
+- CREATE_USER: người tạo
+- UPDATE_USER: người cập nhật
+- STATUS: trạng thái
+
+## ORDER_REQUEST_DETAIL_CHARACTERISTIC
+- ID: khóa chính
+- REQUEST_ID: khóa tham chiếu
+- DETAIL_ID: khóa tham chiếu
+- CODE: mã
+- VALUE: 
+- CREATE_USER: người tạo
+- CREATE_DATE: thời gian tạo
+- UPDATE_USER: người cập nhật
+- UPDATE_DATE: thời gian cập nhật
+
+## ORDERS_CANCEL
+- ID: khóa chính
+- BP_ID: khóa tham chiếu
+- CANCEL_USER_ID: khóa tham chiếu
+- CANCEL_REASON: 
+- STATUS: trạng thái
+- CREATE_DATE: thời gian tạo
+- CREATE_USER: người tạo
+- UPDATE_DATE: thời gian cập nhật
+- UPDATE_USER: người cập nhật
+- CANCEL_LOG: 
+
+## task_result_option
+- id: khóa chính
+- task_code: mã
+- result_code: mã
+- result_token: 
+- name: tên
+- status: trạng thái
+- create_date: thời gian tạo
+- create_user: người tạo
+- update_date: thời gian cập nhật
+- update_user: người cập nhật
+- bssWsAddress: địa chỉ
+- orderPaymentService: 
+- validateOrderService: 
+- ordSysConfigRepo: 
+- interfaceSaleOrder: 
+- productOrderRepo: 
+- orderCharacteristicRepo: 
+- orderServiceItemRepo: 
+- orderCustomerRepo: 
+- orderStaffService: 
+- orderService: 
+- productOrderItemService: 
+- productOrderItemRepo: 
+- subscriberService: 
+- interfaceProductService: 
+- ordersRepo: 
+- staffRepo: 
+- orderSubscriberRepo: 
+- customerService: 
+- orderFileUploadRepo: 
+- runtimeService: 
+- uploadFileService: 
+- historyService: 
+- orderPriceRepo: giá trị/tiền
+- cancelOrderService: 
+- ordersBrandnameReportService: 
+- optionSetValueRepo: 
+- ordersRepoMyBatis: 
+- orderTypeRepo: 
+- validateOrderService: 
+- orderRepoMyBatis: 
+- sysConfigRepo: 
+- self: 
+- v2ActHiVarinstRepo: 
+- receiveApproveHistoryRepo: 
+- orderMbccsService: 
+- businessWS: 
+- areaRepo: 
+- areaService: 
+- username: 
+- password: 
+- orderService: 
+- caService: 
+- smePortalService: 
+- orderPriceRepo: giá trị/tiền
+- systemUserName: 
+- systemPassword: 
+- cpCode: 
+- connectTimeout: 
+- requestTimeout: 
+- urlVContract: 
+- smeUsername: 
+- smePassword: 
+- smeCpCode: 
+- systemUsernameNB: 
+- systemPasswordNB: 
+- mapAreaPartnerRepo: 
+- ordSysConfigRepo: 
+- orderService: 
+- bpStateRepo: trạng thái
+- camelRestRequestCfgRepo: 
+- camelSoapRequestCfgRepo: 
+- historyService: 
+- optionSetValueRepo: 
+- orderService: 
+- username: 
+- password: 
+- validateOrderService: 
+- sysConfigService: 
+- orderTypeRepo: 
+- ordersRepo: 
+- productOrderItemRepo: 
+- orderCharacteristicRepo: 
+- orderPriceRepo: giá trị/tiền
+- productOrderRepo: 
+- orderSaleService: 
+- subscriberService: 
+- sendSmsService: 
+- taskService: 
+- tendooService: 
+- orderSubscriberRepo: 
+- orderCustomerRepo: 
+- customerService: 
+- orderTypeExtRepo: 
+- orderFileUploadRepo: 
+- orderStaffService: 
+- interfaceProductSMEService: 
+- ordersRepoMyBatis: 
+- ordersExtRepoMyBatis: 
+- cancelOrderService: 
+- codXService: 
+- ordSysCfgService: 
+- productRelationshipRepo: 
+- easyHrmService: 
+- easyBooksService: 
+- orderIdNoRepo: 
+- sysConfigRepo: 
+- orderComboService: 
+- bpStateRepo: trạng thái
+- bpStateRepoMyBatis: trạng thái
+- orderTypeRepoMyBatis: 
+- staffRepo: 
+- runtimeService: 
+- scontractSmeService: 
+- ordersExtRepo: 
+- orderCharacteristicService: 
+- orderServiceItemRepo: 
+- interfaceEasyBooksService: 
+- interfaceProductService: 
+- dmsService: 
+- uploadFileService: 
+- sysConfigRepo: 
+- ordSysConfigRepoMyBatis: 
+- user: 
+- password: 
+- ordersBrandnameReportRepo: 
+- orderSubscriberRepo: 
+- staffRepo: 
+- orderSaleService: 
+- orderService: 
+- updateOrdersBrandnameReportQueue: 
+- orderFileUploadRepo: 
+- apiToken: 
+- clientId: 
+- grantType: 
+- username: 
+- password: 
+- interfaceLoginCmpService: 
+- interfaceCmpService: 
+- taskService: 
+- restRequestConfigRepo: 
+- self: 
+- bpStateRepo: trạng thái
+- productService: 
+- runtimeService: 
+- interfaceVTrackService: 
+- ordersRepo: 
+- orderCustomerRepo: 
+- pricingService: 
+- orderFileUploadRepo: 
+- orderCharacteristicRepo: 
+- productOrderItemRepo: 
+- productOrderRepo: 
+- productRelationshipRepo: 
+- orderServiceItemRepo: 
+- repositoryService: 
+- engine: 
+- v2ActHiVarinstRepo: 
+- orderTypeRepo: 
+- orderSubscriberRepo: 
+- orderPriceRepo: giá trị/tiền
+- sysConfigRepo: 
+- historyService: 
+- orderPriceAltRepo: giá trị/tiền
+- validateOrderService: 
+- orderCharacteristicService: 
+- hotlineService: 
+- orderCustCharacteristicRepo: 
+- ordSysCfgService: 
+- staffRepo: 
+- mapStaffGroupRepo: 
+- smsService: 
+- ordersReportRepo: 
+- cancelOrderService: 
+- ordersExtRepo: 
+- staffTableRepo: 
+- orderTypeExtRepo: 
+- orderTypeService: 
+- ordersReportService: 
+- taskResultOptionRepo: 
+- sysSupportService: 
+- pricingConfigRepo: 
+- productOrderItemService: 
+- bpStateActionRepo: trạng thái
+- interfaceProductService: 
+- provisioningService: 
+- interfaceSaleOrder: 
+- shopRepo: 
+- orderSaleService: 
+- sendSmsService: 
+- ordSysConfigRepo: 
+- validateOrderTrialService: 
+- customerService: 
+- uploadFileService: 
+- optionSetService: 
+- subscriberService: 
+- orderPriceService: giá trị/tiền
+- taskProcessService: 
+- orderImService: 
+- serviceItemService: 
+- orderStaffService: 
+- ordersReportHsdtSmeRepo: 
+- profileService: 
+- orderProductService: 
+- scontractSmeService: 
+- orderLockRepo: 
+- orderLockRepoMyBatis: 
+- partnerTransCodeRepoMyBatis: 
+- sysConfigService: 
+- interfaceVTrackV2Service: 
+- vtrackingService: 
+- smePortalService: 
+- cmpService: 
+- queryProductInfoService: 
+- orderPromotionRepo: 
+- orderRequestRepo: 
+- optionSetValueRepo: 
+- ordersBrandnameReportService: 
+- dmsService: 
+- vOfficeService: 
+- vMeetingService: 
+- v2ActRuDeadLetterJobRepoMyBatis: 
+- ordersRepoMyBatis: 
+- orderRepoMyBatis: 
+- ordersExtRepoMyBatis: 
+- orderIdNoRepo: 
+- areaService: 
+- codXService: 
+- receiveApproveHistoryService: 
+- orderComboService: 
+- orderRequestDetailRepo: 
+- orderRequestDetailCharacteristicRepo: 
+- smePortalService: 
+- sysConfigRepo: 
+- ordersRepoMyBatis: 
+- orderSaleService: 
+- orderService: 
+- account: số lượng
+- password: 
+- proService: 
+- bankplusService: 
+- sendSmsService: 
+- orderTypeService: 
+- fakeRequest: 
+- fakeResponse: 
+- interfaceTendooService: 
+- orderPriceService: giá trị/tiền
+- orderPriceRepo: giá trị/tiền
+- pricingService: 
+- ordersRepo: 
+- orderTypeRepo: 
+- characteristicRepo: 
+- productRelationshipRepo: 
+- ordersRepo: 
+- staffRepo: 
+- productOrderItemRepo: 
+- productOrderRepo: 
+- orderCharacteristicRepo: 
+- orderSaleService: 
+- pricingService: 
+- account: số lượng
+- password: 
+- productOrderItemRepo: 
+- productOrderRepo: 
+- orderCharacteristicRepo: 
+- userName: 
+- password: 
+- staffCode: 
+- orderService: 
+- productOrderItemRepo: 
+- productService: 
+- validateOrderService: 
+- orderTypeExtRepo: 
+- orderTypeRepo: 
+- productSpecCharService: 
+- productSpecCharValueService: 
+- webHookId: 
+- webHookSecret: 
+- orderCustomerRepo: 
+- orderCustomerRepoMyBatis: 
+- staffRepo: 
+- orderDataService: 
+- ordersRepo: 
+- orderCharacteristicRepo: 
+- orderService: 
+- ordersReportRepo: 
+- orderSubscriberRepo: 
+- productOrderItemRepo: 
+- optionSetService: 
+- orderTypeExtRepo: 
+- orderCharacteristicRepo: 
+- orderStaffService: 
+- bpStateRepo: trạng thái
+- orderTypeRepo: 
+- interfaceProductService: 
+- sysConfigService: 
+- ordersExtRepoMyBatis: 
+- optionSetValueRepo: 
+- orderProductService: 
+- orderCharacteristicService: 
+- subscriberService: 
+- vInvoiceService: 
+- orderService: 
+- scontractSmeService: 
+- caService: 
+- self: 
+- smePortalService: 
+- orderComboService: 
+- orderService: 
+- pricingService: 
+- customerService: 
+- orderSaleService: 
+- optionSetService: 
+- sysConfigService: 
+- orderCharacteristicRepo: 
+- interfaceProductService: 
+- orderPriceService: giá trị/tiền
+- ordSysConfigRepo: 
+- vOfficeService: 
+- ordersRepo: 
+- username: 
+- password: 
+- interfaceInvoiceService: 
+- orderService: 
+- runtimeService: 
+- customerService: 
+- ordersRepo: 
+- orderCharacteristicRepo: 
+- interfaceVneidService: 
+- historyService: 
+- interfaceApiGWVneidService: 
+- ordersReportRepo: 
+- agentGWServiceCodeCA: 
+- agentGWAPIKey: 
+- agentGWCode: 
+- context: 
+- ordersRepo: 
+- ordersReportService: 
+- ordersReportRepo: 
+- taskResultOptionRepo: 
+- historyService: 
+- runtimeService: 
+- repositoryService: 
+- processEngine: 
+- taskService: 
+- configName: 
+- ip: 
+- port: 
+- ssl: 
+- userName: 
+- password: 
+- session: 
+- transport: 
+- log: 
+- ordersRepo: 
+- interfaceOneOfficeService: 
+- orderService: 
+- orderTypeRepo: 
+- token: 
+- pricingService: 
+- userName: 
+- password: 
+- interfaceProductService: 
+- userName: 
+- password: 
+- stockModelCode: 
+- objectCode: 
+- vInvoiceService: 
+- scontractSmeService: 
+- orderService: 
+- productService: 
+- orderTypeExtRepo: 
+- validateOrderService: 
+- interfaceProductService: 
+- interfaceSaleOrder: 
+- orderSaleService: 
+- easyBooksService: 
+- ordSysConfigRepo: 
+- subscriberService: 
+- vbhxhService: 
+- validateOrderAsyncService: 
+- orderTypeExtService: 
+- orderPriceService: giá trị/tiền
+- tendooService: 
+- sendSmsRepo: 
+- sysConfigService: 
+- smsContentRepo: 
+- cpCodeVtshop: 
+- cpCodeHotline: 
+- aliasHotline: 
+- aliasVTshop: 
+- aiAuthorization: 
+- interfaceSaleOrder: 
+- ordersRepo: 
+- orderCustomerRepo: 
+- orderFileUploadRepo: 
+- orderServiceItemRepo: 
+- orderSubscriberRepo: 
+- runtimeService: 
+- subscriberRepo: 
+- staffRepo: 
+- hotlineService: 
+- orderClaimRepo: 
+- historyService: 
+- orderTypeExtRepo: 
+- productOrderItemRepo: 
+- orderPriceRepo: giá trị/tiền
+- ordSysConfigRepo: 
+- orderTypeService: 
+- externalSaleService: 
+- engine: 
+- orderService: 
+- taskProcessService: 
+- shopRepo: 
+- interfaceProductService: 
+- taskService: 
+- optionSetValueRepo: 
+- ordersReportRepo: 
+- ordersReportHsdtSmeRepo: 
+- sysConfigRepo: 
+- v2ActHiVarinstRepo: 
+- orderTypeRepo: 
+- caService: 
+- interfaceCaService: 
+- orderCharacteristicRepo: 
+- orderStaffService: 
+- scontractSmeService: 
+- smePortalService: 
+- loginScontractService: 
+- interfaceScontractService: 
+- ordersRepoMyBatis: 
+- ordersExtRepo: 
+- productOrderItemRepoMyBatis: 
+- productRelationshipRepo: 
+- productOrderItemService: 
+- orderTypeExtRepoBatis: 
+- productOrderRepo: 
+- invoiceDataService: 
+- orderCharacteristicService: 
+- vneidService: 
+- managementService: 
+- self: 
+- urlVContract: 
+- webServiceAP: 
+- profileUsername: 
+- profilePassword: 
+- username: 
+- password: 
+- isNotHuman: 
+- cpCode: 
+- orderFileUploadRepoMyBatis: 
+- optionSetValueSaleRepoCustom: 
+- dinhVVRepoCustom: 
+- orderSmeHubService: 
+- provisioningService: 
+- vInvoiceService: 
+- interfaceVInvoiService: 
+- easyBooksService: 
+- fakePro: 
+- proList: 
+- isdnFakeLockTopup: số liên lạc
+- authorization: 
+- partyCode: 
+- fakePro: 
+- fakeProResult: 
+- proList: 
+- proSuccessCodeLst: 
+- proRetryCodeLst: 
+- fakeRequest: 
+- fakeResponse: 
+- loginScontractService: 
+- orderCustomerRepo: 
+- ordersRepo: 
+- orderFileUploadRepo: 
+- orderTypeExtRepo: 
+- areaRepo: 
+- productOrderItemRepo: 
+- orderSubscriberRepo: 
+- orderCharacteristicRepo: 
+- staffRepo: 
+- sysConfigRepo: 
+- orderServiceItemRepo: 
+- runtimeService: 
+- orderStaffService: 
+- scontractSmeService: 
+- clientId: 
+- clientSecret: 
+- receiveApproveHistoryRepo: 
+- userName: 
+- password: 
+- caService: 
+- validateOrderService: 
+- smePortalService: 
+- orderTypeExtRepo: 
+- orderTypeRepo: 
+- orderStaffService: 
+- productSpecCharValueService: 
+- interfaceSaleOrder: 
+- productOrderItemRepo: 
+- ordersExtRepoMyBatis: 
+- optionSetValueRepo: 
+- sysConfigService: 
+- interfaceProductService: 
+- pricingService: 
+- orderPriceService: giá trị/tiền
+- orderCharacteristicRepo: 
+- customerService: 
+- ordSysConfigRepo: 
+- identifier: 
+- password: 
+- interfaceVTrackV2Service: 
+- orderSaleService: 
+- interfaceVTrackService: 
+- ordSysConfigRepo: 
+- orderCharacteristicService: 
+- hotlineService: 
+- interfaceProductService: 
+- staffRepo: 
+- ordersExtRepo: 
+- smsService: 
+- interfaceSaleOrder: 
+- proBankplusUser: 
+- proBankplusPass: 
+- fakePro: 
+- proList: 
+- smePortalService: 
+- areaService: 
+- historyService: 
+- orderCharacteristicRepo: 
+- clientId: 
+- xApiKey: 
+- orderService: 
+- repo: 
+- self: 
+- ordersFileRepo: 
+- ordSysCfgService: 
+- mailContentRepo: 
+- areaService: 
+- staffService: 
+- interfaceProductService: 
+- validateOrderService: 
+- host: 
+- port: 
+- userName: 
+- password: 
+- async: 
+- sysConfigRepo: 
+- queryProductInfoService: 
+- provisioningService: 
+- username: 
+- password: 
+- isNotHuman: 
+- cpCode: 
+- interfaceScontractService: 
+- optionSetValueRepo: 
+- shopService: 
+- runtimeService: 
+- id: khóa chính
+- code: mã
+- name: tên
+- value: 
+- status: trạng thái
+- orderService: 
+- orderService: 
+- putFileQlhsUsername: 
+- putFileQlhsPassword: 
+- orderServiceClient: 
+- orderSoapServiceClient: 
+- restServiceCreater: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- ordersRepo: 
+- em: 
+- em: 
+- sysConfigRepo: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- ordersReportRepo: 
+- staffRepo: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- sysConfigRepo: 
+- em: 
+- em: 
+- em: 
+- em: 
+- em: 
+- listSubscriberDTOMessage: 
+- subscriberDTO: thời điểm kết thúc
+- code: mã
+- description: mô tả
+- listSubSuccess: 
+- listSubFail: 
+- code: mã
+- description: mô tả
+- code: mã
+- message: 
+- description: mô tả
+- lstActionAudit: 
+- subscriberDTO: thời điểm kết thúc
+- lastOrder: 
+- code: mã
+- message: 
+- lstSubscriberDTO: thời điểm kết thúc
+- groupTypeDetail: 
+- groupIdDetail: 
+- groupNameDetail: 
+- code: mã
+- description: mô tả
+- listSubscriber: 
+- projectSmeId: 
+- custId: 
+- projectCode: 
+- projectName: 
+- status: trạng thái
+- userManager: 
+- typeExportInvoice: 
+- commodityName: 
+- paymentType: 
+- invoiceAddress: địa chỉ
+- contract: 
+- signDate: thời gian
+- repCust: 
+- fax: 
+- position: 
+- telNumber: số liên lạc
+- provinceProject: 
+- description: mô tả
+- createUser: 
+- createDatetime: thời gian
+- updateUser: 
+- updateDatetime: thời gian
+- statusName: trạng thái
+- listProjectSmePhaseDTO: thời điểm kết thúc
+- success: 
+- errorCode: 
+- code: mã
+- description: mô tả
+- listSubscriberDTO: thời điểm kết thúc
+- expireDate: thời gian
+- memberList: 
+- numSub: 
+- resultCodeCustMapNational: 
+- resultDesCustMapNational: 
+- custId: 
+- hasSubByService: 
+- subId: 
+- isdn: số liên lạc
+- status: trạng thái
+- numInvoice: 
+- dateTimeInvoice: 
+- listSubAttDTO: thời điểm kết thúc
+- errorCode: 
+- message: 
+- orders: 
+- countOrderWaitReceive: số lượng
+- countOrderApprove: số lượng
+- projectSmePhaseId: 
+- projectSmeid: 
+- projectPhaseName: 
+- startDateRecive: 
+- endDateReceive: 
+- expireAcceptDate: thời gian
+- expirePaymentDate: thời gian
+- status: trạng thái
+- createUser: 
+- createDatetime: thời gian
+- updateUser: 
+- updateDatetime: thời gian
+- statusName: trạng thái
+- code: mã
+- listSubscriber: 
+- code: mã
+- description: mô tả
+- checkConditionPromotion: 
+- code: mã
+- description: mô tả
+- listSubscriber: 
+- code: mã
+- message: 
+- description: mô tả
+- hasUseSme: 
+- code: mã
+- description: mô tả
+- projectSmeDTO: thời điểm kết thúc
+- customerAccountDTO: số lượng
+- code: mã
+- description: mô tả
+- actionAuditDTOList: 
+- success: 
+- description: mô tả
+- code: mã
+- message: 
+- value: 
+- code: mã
+- description: mô tả
+- listSubscriber: 
+- maiIsdn: số liên lạc
+- lstMemIsdn: số liên lạc
+- success: 
+- outputObject: 
+- staffId: 
+- reasonId: 
+- orderId: 
+- actionCode: 
+- subRelProductDTO: thời điểm kết thúc
+- actStatus: trạng thái
+- actStatusName: trạng thái
+- isdn: số liên lạc
+- description: mô tả
+- custId: 
+- listSubId: 
+- staffId: 
+- errorCode: 
+- productCode: 
+- productName: 
+- subId: 
+- type: 
+- code: mã
+- description: mô tả
+- message: 
+- extKey: 
+- extValue: 
+- groupsId: 
+- createDatetime: thời gian
+- createUser: 
+- id: khóa chính
+- status: trạng thái
+- updateDatetime: thời gian
+- updateUser: 
+- incentivesMethodId: 
+- staffDTO: thời điểm kết thúc
+- requestConnectSmeDTO: thời điểm kết thúc
+- staffDTO: thời điểm kết thúc
+- subId: 
+- subPromotionPrepaidDTO: thời điểm kết thúc
+- reasonId: 
+- isdnVContact: số liên lạc
+- contactEmail: email
+- contactIsdn: số liên lạc
+- staffDTO: thời điểm kết thúc
+- listUploadFileDTO: thời điểm kết thúc
+- reasonId: 
+- groupId: 
+- groupCode: 
+- reasonId: 
+- staffCode: 
+- listUploadFileDTO: thời điểm kết thúc
+- orderId: 
+- numberOfSignature: 
+- numMonth: 
+- listGroupsExtDTONew: 
+- staffDTO: thời điểm kết thúc
+- listVasNew: 
+- listVasOld: 
+- subId: 
+- reasonId: 
+- orderId: 
+- source: 
+- target: 
+- staffDTO: thời điểm kết thúc
+- isdn: số liên lạc
+- telecomServiceId: số liên lạc
+- serial: 
+- reasonId: 
+- notCreateSaleTranIM: 
+- profileDocumentDTO: thời điểm kết thúc
+- listSubAttDTO: thời điểm kết thúc
+- idNo: 
+- custName: 
+- birthDate: thời gian
+- telMobile: số liên lạc
+- lstVasRegisterSuccess: 
+- lstVasRegisterError: 
+- message: 
+- description: mô tả
+- errorCode: 
+- errorDesc: 
+- fileObjectId: 
+- lstSubOrderError: 
+- lstSubOrderSucess: 
+- orderId: 
+- requestId: 
+- statusSubOrder: trạng thái
+- statusOrder: trạng thái
+- subOrderId: 
+- orderType: 
+- staffDTO: thời điểm kết thúc
+- isdn: số liên lạc
+- telecomServiceId: số liên lạc
+- listSubGoodsOld: 
+- listSubGoodsNew: 
+- staffId: 
+- subscriberDTO: thời điểm kết thúc
+- reasonId: 
+- actionCode: 
+- orderId: 
+- channelCode: 
+- code: mã
+- description: mô tả
+- hasSubCloudCA: 
+- lstOldRecordSelected: 
+- lstFile: 
+- lstFileCode: 
+- message: 
+- noSendFile: 
+- omniProcessId: 
+- omniTaskId: 
+- omniOrderType: 
+- groupId: 
+- memberList: 
+- staffId: 
+- actionCode: 
+- reasonId: 
+- subscriberDTO: thời điểm kết thúc
+- actionCode: 
+- staffId: 
+- reasonId: 
+- groupId: 
+- staffCode: 
+- actionCode: 
+- reasonId: 
+- description: mô tả
+- groupsDTO: thời điểm kết thúc
+- customerDTO: thời điểm kết thúc
+- isdnMainSip: số liên lạc
+- listGroupsMemberDTO: thời điểm kết thúc
+- subscriberDTO: thời điểm kết thúc
+- code: mã
+- description: mô tả
+- listMapVContactSip: 
+- listSubSuccess: 
+- listSubFail: 
+- result: 
+- listResultAddMember: 
+- isdn: số liên lạc
+- productCodeNew: 
+- telecomServiceId: số liên lạc
+- listSubAttNew: 
+- profileCustomer: 
+- profileSubscriber: 
+- profileAccount: số lượng
+- staffDTO: thời điểm kết thúc
+- actionCode: 
+- reasonId: 
+- listSubAttDTO: thời điểm kết thúc
+- listUploadFileDTO: thời điểm kết thúc
+- orderId: 
+- channelCode: 
+- accountNew: số lượng
+- actionDetailId: 
+- actionAuditId: 
+- colName: 
+- newValue: 
+- oldValue: 
+- tableName: 
+- rowId: 
+- issueDatetime: thời gian
+- description: mô tả
+- customerDTO: thời điểm kết thúc
+- customerAccountDTO: số lượng
+- subscriberDTO: thời điểm kết thúc
+- numSubCAActive: 
+- staffId: 
+- subscriberDTO: thời điểm kết thúc
+- reasonId: 
+- actionCode: 
+- orderId: 
+- channelCode: 
+- responseCode: 
+- description: mô tả
+- amsSaleTransId: 
+- staffId: 
+- groupsDTO: thời điểm kết thúc
+- actionCode: 
+- reasonId: 
+- listUploadFileDTO: thời điểm kết thúc
+- listSubId: 
+- staffId: 
+- code: mã
+- description: mô tả
+- listSubSuccess: 
+- listSubFail: 
+- staffId: 
+- subscriberDTO: thời điểm kết thúc
+- reasonId: 
+- actionCode: 
+- orderId: 
+- channelCode: 
+- staffCode: 
+- shopCode: 
+- staffId: 
+- shopId: 
+- staffName: 
+- shopName: 
+- ownerType: 
+- ownerId: 
+- saleTransStaffId: 
+- ipAddress: địa chỉ
+- district: 
+- province: 
+- staffOwnerId: 
+- shopChannelTypeId: 
+- staffChannelTypeId: 
+- shopProvince: 
+- shopPath: 
+- loginName: 
+- shopLogin: 
+- createStaffId: 
+- systemType: 
+- staffCodeLogin: 
+- shopCodeLogin: 
+- roleMap: 
+- tags: 
+- byPassValidateAI: 
+- errorCode: 
+- isRunValidate: thời gian
+- transSign: 
+- flowSignForwarding: 
+- accountByPassDebit: số lượng
+- idNoByPassDebit: 
+- idNoByPassDebitByProduct: 
+- userNameByPassDebit: 
+- typeAI: 
+- extraData: 
+- staffCodeIntroduce: 
+- shopCodeIntroduce: 
+- staffLoginCode: 
+- createOrderConnectFile: 
+- isPay: 
+- payTransactionId: 
+- code: mã
+- description: mô tả
+- groupId: 
+- memberList: 
+- staffId: 
+- actionCode: 
+- reasonId: 
+- lstSubGoodsDTO: thời điểm kết thúc
+- staffId: 
+- vasList: 
+- subId: 
+- reasonId: 
+- orderId: 
+- listActionDetailDTO: thời điểm kết thúc
+- staffDTO: thời điểm kết thúc
+- isdn: số liên lạc
+- reasonId: 
+- callPro: 
+- customerDTO: thời điểm kết thúc
+- code: mã
+- description: mô tả
+- actionAuditDTOList: 
+- subscriberDTO: thời điểm kết thúc
+- orderId: 
+- staffDTO: thời điểm kết thúc
+- subId: 
+- listSubGoodsDTO: thời điểm kết thúc
+- listSubStageItemDTO: thời điểm kết thúc
+- isdnMainSip: số liên lạc
+- listGroupsMemberDTO: thời điểm kết thúc
+- code: mã
+- description: mô tả
+- numRegisterVas: 
+- listMapVContactSip: 
+- staffDTO: thời điểm kết thúc
+- isdn: số liên lạc
+- expireDatetime: thời gian
+- pricePlan: giá trị/tiền
+- numMonth: 
+- reasonId: 
+- listSubAttNew: 
+- groupId: 
+- groupType: 
+- name: tên
+- customerDTO: thời điểm kết thúc
+- createDatetime: thời gian
+- createUser: 
+- description: mô tả
+- endDatetime: thời gian
+- staDatetime: thời gian
+- status: trạng thái
+- updateDatetime: thời gian
+- updateUser: 
+- listGroupsExtDTO: thời điểm kết thúc
+- code: mã
+- description: mô tả
+- subvBHXH: 
+- code: mã
+- code: mã
+- description: mô tả
+- listSubSuccess: 
+- listSubFail: 
+- orderId: 
+- data: 
+- values: 
+- isdn: số liên lạc
+- main: 
+- groupMemberId: 
+- listSubAttDTO: thời điểm kết thúc
+- description: mô tả
+- groupsDTO: thời điểm kết thúc
+- staffId: 
+- vasList: 
+- subId: 
+- reasonId: 
+- orderId: 
+- listActionDetailDTO: thời điểm kết thúc
+- staffDTO: thời điểm kết thúc
+- isdn: số liên lạc
+- telecomServiceId: số liên lạc
+- listSubGoodsDTOOld: 
+- listSubGoodsDTONew: 
+- listSubStageItemDTOOld: 
+- listSubStageItemDTONew: 
+- reasonId: 
+- orderId: 
+- channelCode: 
+- listSubAttDTO: thời điểm kết thúc
+- groupsDTO: thời điểm kết thúc
+- actionCode: 
+- reasonId: 
+- staffCode: 
+- listUploadFileDTO: thời điểm kết thúc
+- orderId: 
+- lstActionDetailDTO: thời điểm kết thúc
+- errorCode: 
+- success: 
+- description: mô tả
+- description: mô tả
+- brandnameIdentityDTO: thời điểm kết thúc
+- em: 
+- em: 
+- em: 
+- faultInfo: 
+- customer: 
+- productOrderItem: 
+- viewMode: 
+- extFilter: 
+- flagPriceVat: giá trị/tiền
+- productOrderItemList: 
+- businessCode: 
+- staffCode: 
+- systemType: 
+- pricingPostpaid: 
+- code: mã
+- message: 
+- data: 
+- success: 
+- errorCode: 
+- description: mô tả
+- success: 
+- priceSummary: giá trị/tiền
+- productOrderItem: 
+- lstPromotion: 
+- priceSummaryByView: giá trị/tiền
+- id: khóa chính
+- displayName: 
+- url: 
+- name: tên
+- slug: 
+- description: mô tả
+- displayName: 
+- username: 
+- firstName: 
+- lastName: 
+- email: email
+- count: số lượng
+- results: 
+- accessToken: 
+- error: 
+- description: mô tả
+- grantType: 
+- clientId: 
+- username: 
+- password: 
+- id: khóa chính
+- name: tên
+- displayName: 
+- description: mô tả
+- imageName: 
+- vcpus: 
+- ram: 
+- region: 
+- zone: 
+- project: 
+- owner: 
+- volumes: 
+- username: 
+- email: email
+- lstUsername: 
+- detail: 
+- count: số lượng
+- next: 
+- previous: 
+- results: 
+- id: khóa chính
+- displayName: 
+- username: 
+- firstName: 
+- lastName: 
+- email: email
+- volumeId: 
+- volumeSize: 
+- diskType: 
+- speed: 
+- mountAs: 
+- code: mã
+- bucketSize: 
+- monthlyBandwidth: 
+- username: 
+- project: 
+- region: 
+- results: 
+- email: email
+- detail: 
+- size: 
+- diskType: 
+- url: 
+- name: tên
+- id: khóa chính
+- image: 
+- status: trạng thái
+- period: 
+- id: khóa chính
+- username: 
+- template: 
+- period: 
+- startedAt: 
+- expiresSt: 
+- initialData: 
+- username: 
+- templateCode: 
+- period: 
+- regionName: 
+- imageName: 
+- projectId: 
+- extraVolumes: 
+- rootVolumeSize: 
+- orderId: 
+- paymentMethod: 
+- paymentCycle: 
+- autoStart: 
+- size: 
+- protocol: 
+- filesystemId: 
+- loadBalancerId: 
+- version: 
+- bucketSize: 
+- newSize: 
+- volume: 
+- status: trạng thái
+- errorCode: 
+- message: 
+- token: 
+- prefix: 
+- number: 
+- firstName: 
+- middleName: 
+- lastName: 
+- birthday: 
+- gender: 
+- email: email
+- address: địa chỉ
+- paymentMethod: 
+- plan: 
+- paymentAmount: giá trị/tiền
+- transactionId: 
+- billCode: 
+- orderId: 
+- checksum: 
+- quantity: 
+- userId: 
+- voucherCodeList: 
+- extCode: 
+- productOfferingId: 
+- productOfferingCode: 
+- quantity: 
+- telecomServiceId: số liên lạc
+- numberOfIsdn: số liên lạc
+- numberOfCompleteIsdn: số liên lạc
+- isdnMemberInfos: số liên lạc
+- checkFtth: 
+- checkTel: số liên lạc
+- username: 
+- telecomServiceId: số liên lạc
+- isdn: số liên lạc
+- numberOfSign: 
+- addMemberDate: thời gian
+- state: trạng thái
+- detailResult: 
+- ocsTime: thời gian
+- ballType: 
+- idNo: 
+- errorCode: 
+- message: 
+- data: 
+- requestId: 
+- errorCode: 
+- message: 
+- data: 
+- requestId: 
+- accessToken: 
+- description: mô tả
+- staffCode: 
+- needSignCaContract: 
+- uploadFileDTO: thời điểm kết thúc
+- reasonCancel: 
+- orderId: 
+- customer: 
+- approvedSuccess: 
+- cancelReason: 
+- bpId: 
+- createDate: thời gian
+- completeDate: thời gian
+- numberOfIsdn: số liên lạc
+- numberOfSuccessIsdn: số liên lạc
+- numberOfFailIsdn: số liên lạc
+- state: trạng thái
+- staffCode: 
+- needSignCAContract: 
+- uploadFileDTO: thời điểm kết thúc
+- reasonCancel: 
+- taxCode: 
+- systemStaffCode: 
+- errorCode: 
+- message: 
+- data: 
+- username: 
+- password: 
+- code: mã
+- description: mô tả
+- accountCMS: số lượng
+- client_code: mã
+- password: 
+- is_prepaid: cờ boolean/xử lý
+- list_IP: 
+- errorCode: 
+- message: 
+- data: 
+- similarPercent: 
+- username: 
+- password: 
+- systemCode: 
+- transId: 
+- recognizeAndImageValidateInput: 
+- sim: 
+- key: 
+- base64: 
+- idNo: 
+- client_code: mã
+- pack_code: mã
+- username: 
+- password: 
+- recognizedIdNo: 
+- lstImage: 
+- callId: 
+- listTypeDocument: 
+- listImageBase64: 
+- code: mã
+- message: 
+- token: 
+- verifyResult: 
+- verifyResultText: 
+- verifyResultTime: thời gian
+- imageRecognizeFace: 
+- requestId: 
+- imageLive: 
+- imageIdNo: 
+- errorCode: 
+- description: mô tả
+- transId: 
+- imageRecognizeBO: 
+- token: 
+- registerNo: 
+- request: 
+- token: 
+- isdn: số liên lạc
+- amCode: 
+- productCode: 
+- custId: 
+- request: 
+- d: 
+- token: 
+- transportId: 
+- userName: 
+- registrationNo: 
+- token: 
+- userName: 
+- registrationNo: 
+- phoneTenant: số liên lạc
+- packageId: 
+- areaId: 
+- emailTenant: email
+- isNewCreate: 
+- token: 
+- isdn: số liên lạc
+- amCode: 
+- productCode: 
+- metadata: 
+- token: 
+- transportId: 
+- isdn: số liên lạc
+- simSerial: 
+- serialDevice: 
+- productCode: 
+- activeDate: thời gian
+- custId: 
+- deviceType: 
+- isChangeDevice: 
+- __type: 
+- errorCode: 
+- message: 
+- username: 
+- phone: số liên lạc
+- email: email
+- transportId: 
+- deviceCode: 
+- serialSim: 
+- result: 
+- token: 
+- transportId: 
+- isdn: số liên lạc
+- deviceType: 
+- productCode: 
+- activeDate: thời gian
+- simSerial: 
+- serialDevice: 
+- custId: 
+- isChangeDevice: 
+- token: 
+- simSerial: 
+- serialDevice: 
+- registrationNo: 
+- sim: 
+- saleTransId: 
+- saleTransDate: thời gian
+- requestStatus: trạng thái
+- reasonRequestCode: 
+- reasonRequestText: 
+- transactionId: 
+- citizenPid: 
+- feeCode: giá trị/tiền
+- serialNumber: 
+- expirationDateFrom: thời điểm bắt đầu
+- expirationDateTo: thời điểm kết thúc
+- status: trạng thái
+- subject: 
+- fromDate: thời gian
+- toDate: thời gian
+- serialNumber: 
+- status: trạng thái
+- resendDate: thời gian
+- status: trạng thái
+- description: mô tả
+- statusCode: trạng thái
+- errorDetail: 
+- transId: 
+- idNo: 
+- saleTransId: 
+- saleTransDate: thời gian
+- fileStatus: trạng thái
+- reasonCancel: 
+- data: 
+- custName: 
+- idNo: 
+- telNumber: số liên lạc
+- nationality: 
+- province: 
+- district: 
+- precinct: 
+- address: địa chỉ
+- email: email
+- idIssueDate: thời gian
+- idIssuePlace: 
+- packageId: 
+- birthDate: thời gian
+- phone: số liên lạc
+- packageKey: 
+- duration: 
+- isValidateSupport: 
+- data: 
+- success: 
+- phone: số liên lạc
+- email: email
+- staffCode: 
+- system: 
+- packageKey: 
+- shopId: 
+- duration: 
+- transId: 
+- term: 
+- isCreateCmSubscription: 
+- isCombo: 
+- vat: 
+- grandTotal: giá trị/tiền
+- taxCode: 
+- representativeIdNumber: 
+- isValidateSupport: 
+- isValid: 
+- nextStep: 
+- totalBusiness: giá trị/tiền
+- name: tên
+- value: 
+- desc: 
+- data: 
+- subscriptionOrderId: 
+- expiredDate: thời gian
+- username: 
+- hashValue: 
+- grandTotal: giá trị/tiền
+- amCode: 
+- transId: 
+- code: mã
+- detail: 
+- businessName: 
+- packageKey: 
+- duration: 
+- businessId: 
+- actionType: 
+- error: 
+- code: mã
+- phoneNumber: số liên lạc
+- email: email
+- amCode: 
+- sourceSystem: 
+- grandTotal: giá trị/tiền
+- transId: 
+- isCombo: 
+- vat: 
+- term: 
+- isCreateCmSubscription: 
+- channelCode: 
+- taxCode: 
+- representativeIdNumber: 
+- subscriptionOrderItem: 
+- data: 
+- actionType: 
+- orderData: 
+- data: 
+- code: mã
+- error: 
+- code: mã
+- detail: 
+- success: 
+- subscriptionOrder: 
+- part1: 
+- part2: 
+- part3: 
+- part4: 
+- phone: số liên lạc
+- useTime: thời gian
+- contractExpDate: thời gian
+- fromDate: thời gian
+- issuer: 
+- serialNumber: 
+- subject: 
+- toDate: thời gian
+- username: 
+- password: 
+- listService: 
+- listAction: 
+- typeIdentification: 
+- idNo: 
+- fromDate: thời gian
+- toDate: thời gian
+- type: 
+- linkCallBack: 
+- systemStaffCode: 
+- serialCTS: 
+- bundleCode: 
+- idNo: 
+- name: tên
+- createDate: thời gian
+- errorCode: 
+- description: mô tả
+- isExsitCTS: 
+- areaCode: 
+- province: 
+- precinct: 
+- address: địa chỉ
+- name: tên
+- phone: số liên lạc
+- email: email
+- idNo: 
+- idIssueDate: thời gian
+- idIssuePlace: 
+- idType: 
+- title: 
+- subCaInfoList: 
+- subEinvoiceInfoList: 
+- number: 
+- registerCheckbox: 
+- renewCheckbox: 
+- name: tên
+- position: 
+- liceneNo: 
+- liceneDate: thời gian
+- licenePlace: 
+- tin: 
+- address: địa chỉ
+- email: email
+- isdn: số liên lạc
+- customerDTO: thời điểm kết thúc
+- staffDTO: thời điểm kết thúc
+- reasonId: 
+- listUploadFileDTO: thời điểm kết thúc
+- improveQuality: 
+- tradePromotion: 
+- marketingAdvertising: 
+- provideProduct: 
+- researchMarket: 
+- supportCustomer: 
+- freeData: 
+- totalFee: giá trị/tiền
+- totalFeeByWord: giá trị/tiền
+- bbxndl: 
+- hdsme: 
+- sbsme: 
+- pycsme: 
+- cerDualTime: thời gian
+- equipmentType: 
+- userId: 
+- appName: 
+- isdn: số liên lạc
+- signNum: 
+- devStaffCode: 
+- hashAlgorithm: 
+- serialCts: 
+- cerDualTimeDay: 
+- isVneid: 
+- userIdNew: 
+- bundleCode: 
+- ocsIsdn: số liên lạc
+- inCluster: 
+- csr: 
+- connectProductCode: 
+- systemConnect: 
+- mainProductCode: 
+- contactPhone: số liên lạc
+- contactEmail: email
+- userName: 
+- password: 
+- typeIdentification: 
+- idNo: 
+- bundleCode: 
+- type: 
+- username: 
+- password: 
+- customerCa: 
+- username: 
+- password: 
+- orderId: 
+- parentOrderId: 
+- username: 
+- password: 
+- serialCts: 
+- ocsIsdn: số liên lạc
+- chargingSystem: 
+- orderId: 
+- userId: 
+- serialCts: 
+- productCode: 
+- bundleCode: 
+- orderIdList: 
+- saleTransCode: 
+- price: giá trị/tiền
+- success: 
+- message: 
+- code: mã
+- filePath: 
+- success: 
+- message: 
+- code: mã
+- service: 
+- subId: 
+- action: 
+- customerInfo: 
+- cloudCaInfo: 
+- receiverInfo: 
+- errorCode: 
+- description: mô tả
+- endDateTime: thời gian
+- checkboxData: 
+- custName: 
+- custCompany: 
+- custPostion: 
+- custLiceneNo: 
+- custLicenePlace: 
+- custLiceneDate: thời gian
+- taxNo: 
+- relationshipId: 
+- representative: 
+- representativePosition: 
+- representativeIdNo: 
+- representativeIdPlace: 
+- representativeIdDate: thời gian
+- idNo: 
+- idIssueDate: thời gian
+- idIssuePlace: 
+- passport: 
+- passportPlace: 
+- passportDate: thời gian
+- address: địa chỉ
+- custPhone: số liên lạc
+- custFax: 
+- custBankId: 
+- custEmail: email
+- useTime: thời gian
+- useTimeByWord: 
+- useTimeByPackage: 
+- useTimeExtra: 
+- useTimeTotal: giá trị/tiền
+- feeData: giá trị/tiền
+- totalFee: giá trị/tiền
+- totalFeeByWord: giá trị/tiền
+- receiverName: 
+- receiverPostion: 
+- authorizationInformation: 
+- receiverIdno: 
+- receiverIdPlace: 
+- receiverIdDate: thời gian
+- receiverPassport: 
+- receiverPassportPlace: 
+- receiverPassportDate: thời gian
+- receiverPhone: số liên lạc
+- receiverEmail: email
+- receiverAddress: địa chỉ
+- errorCode: 
+- description: mô tả
+- isExsitCTS: 
+- serialNumber: 
+- subjectDN: 
+- issuerDN: 
+- useTimeCTS: 
+- keyPairLength: 
+- deviceKey: 
+- certificateNo: 
+- serialUSB: 
+- fileHSM: 
+- fileNameHSM: 
+- orderId: 
+- statusCode: trạng thái
+- message: 
+- username: 
+- password: 
+- orderId: 
+- userToken: 
+- errorCode: 
+- description: mô tả
+- data: 
+- bpId: 
+- parentBpId: 
+- bpState: trạng thái
+- systemType: 
+- no: 
+- unit: 
+- amount: giá trị/tiền
+- feePerAmount: giá trị/tiền
+- totalFee: giá trị/tiền
+- name: tên
+- tax: 
+- feePerUnit: giá trị/tiền
+- username: 
+- password: 
+- type: 
+- orderId: 
+- isHasTin: 
+- userToken: 
+- customerCa: 
+- subCa: 
+- isRenewCTS: 
+- isHasEmail: email
+- isHasTitle: 
+- isHasDistrict: 
+- isHasDepartment: 
+- isHasOrganization: 
+- isHasCustomerNameLegal: 
+- isEquipmentOrder: 
+- checkbox1: 
+- checkbox2: 
+- checkbox3: 
+- checkbox4: 
+- checkbox5: 
+- checkbox6: 
+- checkbox7: 
+- checkbox8: 
+- checkbox9: 
+- phone: số liên lạc
+- totalMonth: giá trị/tiền
+- totalMonthWord: giá trị/tiền
+- monthByPackage: 
+- monthAdded: 
+- monthTotal: giá trị/tiền
+- city: 
+- day: 
+- month: 
+- year: 
+- username: 
+- password: 
+- type: 
+- orderId: 
+- isHasTin: 
+- isHasEmail: email
+- isHasTitle: 
+- isHasDistrict: 
+- isHasDepartment: 
+- isHasOrganization: 
+- isHasCustomerNameLegal: 
+- userToken: 
+- customerCa: 
+- subCa: 
+- chargingSystem: 
+- parentOrderId: 
+- base64Data: 
+- recordId: 
+- server: 
+- fileName: 
+- fileCode: 
+- username: 
+- password: 
+- path: 
+- quantityEinvoice: 
+- staDateTimeStr: 
+- endDateTimeStr: 
+- prepaidMoney: 
+- username: 
+- password: 
+- type: 
+- orderId: 
+- userToken: 
+- customerCa: 
+- subCa: 
+- orderId: 
+- type: 
+- status: trạng thái
+- description: mô tả
+- requestId: 
+- filePath: 
+- hdsme: 
+- bbbg: 
+- objectCa: 
+- orderInfo: 
+- bbxndl: 
+- staffId: 
+- staffName: 
+- phone: số liên lạc
+- email: email
+- identification: 
+- serialCts: 
+- mysignUsername: 
+- productCode: 
+- reasonCode: 
+- errorCode: 
+- description: mô tả
+- data: 
+- loginName: 
+- fullName: 
+- shopCode: 
+- shopName: 
+- staffId: 
+- shopId: 
+- username: 
+- password: 
+- orderId: 
+- serialCts: 
+- requestType: 
+- userId: 
+- success: 
+- code: mã
+- message: 
+- data: 
+- orderId: 
+- contractCode: 
+- customerMobile: số liên lạc
+- mainCode: 
+- mainCodeDuration: 
+- productDurationUnit: 
+- vasCode: 
+- username: 
+- password: 
+- type: 
+- orderId: 
+- userToken: 
+- subCa: 
+- soCmt: 
+- sdt: 
+- goiCuoc: 
+- username: 
+- password: 
+- customerCa: 
+- success: 
+- message: 
+- code: mã
+- data: 
+- contactName: 
+- contactTitle: 
+- idNo: 
+- idIssueDateStr: 
+- idIssuePlace: 
+- signRequest: 
+- amInformation: 
+- orderId: 
+- hdsme: 
+- sbsme: 
+- bbxndl: 
+- pycsme: 
+- type: 
+- username: 
+- password: 
+- idNo: 
+- account: số lượng
+- insMonth: 
+- orderId: 
+- userToken: 
+- name: tên
+- position: 
+- idno: 
+- passport: 
+- address: địa chỉ
+- phone: số liên lạc
+- email: email
+- name: tên
+- phone: số liên lạc
+- fax: 
+- tax: 
+- relationship: 
+- licence: 
+- licencePlace: 
+- licenceDate: thời gian
+- representative: 
+- representativePosition: 
+- representativeIdno: 
+- representativeIdPlace: 
+- representativeIdDate: thời gian
+- representativePassport: 
+- representativePassportPlace: 
+- representativePassportDate: thời gian
+- representativeAddress: địa chỉ
+- part1: 
+- part2: 
+- part5: 
+- individualInCompany: 
+- company: 
+- household: 
+- individual: 
+- renewCa: 
+- changeCa: 
+- simCa: 
+- createNewCa: 
+- usbToken: 
+- hsm: 
+- mysign: 
+- customerCreateKey: 
+- viettelCreateKey: số liên lạc
+- name: tên
+- position: 
+- idno: 
+- idPlace: 
+- idDate: thời gian
+- passport: 
+- passportPlace: 
+- passportDate: thời gian
+- username: 
+- password: 
+- staffCode: 
+- orderId: 
+- telecomServiceId: số liên lạc
+- subId: 
+- subParentId: 
+- productCode: 
+- orderIdList: 
+- quantityEinvoice: 
+- saleTransCode: 
+- price: giá trị/tiền
+- username: 
+- password: 
+- orderId: 
+- custType: 
+- name: tên
+- idNo: 
+- idIssueDateStr: 
+- idIssuePlace: 
+- busPermitNo: 
+- popIssuePlace: 
+- popIssueDateStr: 
+- tin: 
+- telFax: số liên lạc
+- email: email
+- province: 
+- district: 
+- precinct: 
+- address: địa chỉ
+- ogranization: 
+- company: 
+- unit: 
+- department: 
+- subDepartment: 
+- contactName: 
+- contactTitle: 
+- contactPhone: số liên lạc
+- contactEmail: email
+- customerLegal: 
+- idNoNew: 
+- tinNew: 
+- usernameSSO: 
+- code: mã
+- success: 
+- message: 
+- data: 
+- status: trạng thái
+- message: 
+- signRequest: 
+- objectCa: 
+- name: tên
+- position: 
+- address: địa chỉ
+- phone: số liên lạc
+- email: email
+- username: 
+- password: 
+- orderId: 
+- userToken: 
+- customerCa: 
+- subCa: 
+- productCode: 
+- quantityEinvoice: 
+- devStaffCode: 
+- phoneAdmin: số liên lạc
+- emailAdmin: email
+- staDateTimeStr: 
+- endDateTimeStr: 
+- externalCode: 
+- isTrial: 
+- prepaidMoney: 
+- billingUser: 
+- postpaid: 
+- success: 
+- code: mã
+- message: 
+- username: 
+- password: 
+- dataDisplay: 
+- fileMode: 
+- filePath: 
+- fileBase64: 
+- displaySignSideA: 
+- orderId: 
+- contractCode: 
+- displaySignSideB: 
+- recordTypeScanDTO: thời điểm kết thúc
+- confirmType: 
+- customerMobile: số liên lạc
+- requestCode: 
+- shouldCreateNewRequest: 
+- username: 
+- password: 
+- type: 
+- orderId: 
+- isHasTin: 
+- userToken: 
+- customerCa: 
+- typeServer: 
+- subEinvoice: 
+- subEinvoiceExtend: 
+- taxCode: 
+- promotionSubEnvoices: 
+- success: 
+- message: 
+- code: mã
+- data: 
+- code: mã
+- success: 
+- message: 
+- description: mô tả
+- username: 
+- password: 
+- type: 
+- orderId: 
+- userToken: 
+- customerCa: 
+- subCa: 
+- username: 
+- password: 
+- type: 
+- orderId: 
+- taxCode: 
+- userToken: 
+- subInsurrance: 
+- customerInsurrance: 
+- errorCode: 
+- description: mô tả
+- username: 
+- password: 
+- Type: 
+- orderId: 
+- customerInsurrance: 
+- subInsurrance: 
+- userToken: 
+- username: 
+- password: 
+- Type: 
+- orderId: 
+- customerInsurrance: 
+- subInsurrance: 
+- userToken: 
+- username: 
+- password: 
+- type: 
+- orderId: 
+- isHasTin: 
+- userToken: 
+- customerInsurrance: 
+- subInsurrance: 
+- unitCode: 
+- employeeNum: 
+- insMonth: 
+- devStaffCode: 
+- provinceCode: 
+- districtCode: 
+- businessType: 
+- acount: số lượng
+- authorityCode: 
+- username: 
+- password: 
+- Type: 
+- orderId: 
+- customerInsurrance: 
+- subInsurrance: 
+- userToken: 
+- username: 
+- password: 
+- Type: 
+- orderId: 
+- customerInsurrance: 
+- subInsurrance: 
+- userToken: 
+- custType: 
+- name: tên
+- taxCode: 
+- busPermitNo: 
+- popIssueDateStr: 
+- popIssuePlace: 
+- fiscalYear: 
+- provinceCode: 
+- districtCode: 
+- wardCode: 
+- address: địa chỉ
+- tel: số liên lạc
+- SignPeople: 
+- SignPeopleTitle: 
+- SignPeopleEmail: email
+- contactName: 
+- contactTitle: 
+- contactPhone: số liên lạc
+- contactEmail: email
+- msgCode: 
+- result: 
+- contractId: 
+- obj: 
+- faultInfo: 
+- faultInfo: 
+- status: trạng thái
+- message: 
+- errorCode: 
+- data: 
+- servicePackage: 
+- packageCount: số lượng
+- packageContractPrice: giá trị/tiền
+- packageTotal: giá trị/tiền
+- username: 
+- organizationId: 
+- packageInfos: 
+- total: giá trị/tiền
+- platform: 
+- orderCode: 
+- hash: 
+- actionType: 
+- newOrder: 
+- fullName: 
+- user: 
+- area: 
+- packageCount: số lượng
+- packageContractPrice: giá trị/tiền
+- packageTotal: giá trị/tiền
+- copyrightCount: số lượng
+- copyrightContractPrice: giá trị/tiền
+- copyrightFeeTotal: giá trị/tiền
+- copyrightFeeFree: giá trị/tiền
+- total: giá trị/tiền
+- crmId: 
+- startDate: thời gian
+- endDate: thời gian
+- requestType: 
+- idKey: 
+- username: 
+- servicePackage: 
+- packageDetail: 
+- platform: 
+- crmId: 
+- hash: 
+- licenseKey: 
+- orderCode: 
+- creator: 
+- childrenList: 
+- packagePromotion: 
+- account: số lượng
+- password: 
+- servicePackage: 
+- packageDetail: 
+- platform: 
+- crmId: 
+- hash: 
+- licenseKey: 
+- orderCode: 
+- creator: 
+- requestType: 
+- status: trạng thái
+- message: 
+- errorCode: 
+- data: 
+- requestType: 
+- status: trạng thái
+- message: 
+- errorCode: 
+- data: 
+- idKey: 
+- isParent: 
+- startDate: thời gian
+- endDate: thời gian
+- status: trạng thái
+- message: 
+- errorCode: 
+- serviceLog: 
+- requestId: 
+- requestType: 
+- userName: 
+- organizationId: 
+- packageInfoList: 
+- total: giá trị/tiền
+- platform: 
+- orderCode: 
+- hash: 
+- organizationId: 
+- serviceName: 
+- orderCode: 
+- creator: 
+- hash: 
+- reason: 
+- refund: 
+- taxCode: 
+- customerName: 
+- registerAddress: địa chỉ
+- contactName: 
+- contactEmail: email
+- contactPhone: số liên lạc
+- servicePackage: 
+- startDate: thời gian
+- endDate: thời gian
+- platform: 
+- email: email
+- password: 
+- hash: 
+- packageDetail: 
+- packagePromotion: 
+- representative: 
+- username: 
+- licenseKey: 
+- organizationId: 
+- orderCode: 
+- creator: 
+- budgetCode: 
+- token: 
+- username: 
+- organizationId: 
+- packageInfos: 
+- total: giá trị/tiền
+- platform: 
+- orderCode: 
+- hash: 
+- actionType: 
+- newOrder: 
+- servicePackage: 
+- packageCount: số lượng
+- packageContractPrice: giá trị/tiền
+- packageTotal: giá trị/tiền
+- exp: 
+- countVoucher: số lượng
+- fullName: 
+- duty: 
+- status: trạng thái
+- message: 
+- errorCode: 
+- data: 
+- requestType: 
+- requestType: 
+- status: trạng thái
+- message: 
+- errorCode: 
+- data: 
+- servicePackage: 
+- startDate: thời gian
+- endDate: thời gian
+- username: 
+- servicePackage: 
+- packageDetail: 
+- platform: 
+- crmId: 
+- hash: 
+- licenseKey: 
+- orderCode: 
+- creator: 
+- status: trạng thái
+- message: 
+- status: trạng thái
+- message: 
+- crmId: 
+- startDate: thời gian
+- endDate: thời gian
+- status: trạng thái
+- message: 
+- data: 
+- servicePackage: 
+- startDate: thời gian
+- endDate: thời gian
+- requestType: 
+- code: mã
+- message: 
+- companyName: 
+- tin: 
+- address: địa chỉ
+- city: 
+- customerName: 
+- phone: số liên lạc
+- industryName: 
+- packageName: 
+- duration: 
+- amViettelName: số liên lạc
+- amViettelPhone: số liên lạc
+- orderId: 
+- note: ghi chú
+- systemUsername: 
+- systemPassword: 
+- cpCode: 
+- userName: 
+- contractQuantityTrial: 
+- expiredDateTrial: 
+- userName: 
+- amountSmsMoney: giá trị/tiền
+- userName: 
+- quantity: 
+- enterpriseName: 
+- enterpriseType: 
+- certificateId: 
+- certificateNo: 
+- issuedDate: thời gian
+- issuedAt: 
+- taxCode: 
+- representative: 
+- position: 
+- birthday: 
+- contactProcvince: 
+- contactDistrict: 
+- contactWard: 
+- contactAddress: địa chỉ
+- phone: số liên lạc
+- email: email
+- representativeCertificateId: 
+- representativeCertificateNo: 
+- representativeIssuedDate: thời gian
+- representativeIssuedAt: 
+- sex: 
+- entType: 
+- cpCode: 
+- systemUsername: 
+- systemPassword: 
+- userName: 
+- accounts: số lượng
+- value: 
+- systemUsername: 
+- systemPassword: 
+- cpCode: 
+- taxCode: 
+- typeResource: 
+- quantity: 
+- expiredDate: thời gian
+- status: trạng thái
+- type: 
+- entType: 
+- orderId: 
+- resourceCode: 
+- resource: 
+- username: 
+- password: 
+- isNotHuman: 
+- cpCode: 
+- systemUsername: 
+- systemPassword: 
+- cpCode: 
+- taxCode: 
+- entType: 
+- orderId: 
+- resources: 
+- typeResource: 
+- quantity: 
+- expiredDate: thời gian
+- responseCode: 
+- responseMessage: 
+- id: khóa chính
+- userName: 
+- token: 
+- fullName: 
+- isParent: 
+- userType: 
+- success: 
+- typeResource: 
+- quantity: 
+- expiredDate: thời gian
+- systemLogin: 
+- connectedTaxCode: 
+- connectedCertificateNumber: 
+- connectedTime: thời gian
+- enterpriseInfomation: 
+- resource: 
+- id: khóa chính
+- name: tên
+- phone: số liên lạc
+- email: email
+- userName: 
+- quantity: 
+- type: 
+- taxCode: 
+- typeEnterprise: 
+- keyword: 
+- status: trạng thái
+- pageNumber: 
+- pageSize: 
+- code: mã
+- message: 
+- data: 
+- success: 
+- BanDuAn: 
+- DuAn: 
+- MaDaiLy: 
+- MaKhachHang: 
+- TenKhachHang: 
+- Email: email
+- DienThoai: 
+- NgayDangKy: 
+- ThueBao: 
+- Data: 
+- TongBanGhi: 
+- XuLyLoi: 
+- XuLyThanhCong: 
+- ThanhCongRespone: 
+- MaSoThue: 
+- PhanLoai: 
+- IsToChuc: 
+- Email: email
+- SoThuTu: 
+- MaDichVu: 
+- TenDichVu: 
+- DonViTinh: 
+- SoLuong: 
+- DonGia: 
+- ChietKhau: 
+- ThanhTien: 
+- PhanLoai: 
+- SoLuongHopDong: 
+- SoLuongTangThem: 
+- TongSoLuong: 
+- Status: trạng thái
+- Messager: 
+- Data: 
+- sudungtichhop: 
+- soThamChieu: 
+- soHopDong: 
+- ngayHopDong: 
+- maSoThue: 
+- tenThueBao: 
+- diaChi: 
+- soDienThoai: 
+- email: email
+- nguoiDaiDien: 
+- nguoiDaiDienChucVu: 
+- ngayKichHoatThueBao: 
+- ngayHetHanThueBao: 
+- isToChuc: 
+- phanLoai: 
+- thongTinDichVu: 
+- systemUsername: 
+- systemPassword: 
+- cpCode: 
+- orderId: 
+- taxCode: 
+- entType: 
+- resources: 
+- partnerCode: 
+- resourceCode: 
+- systemUsername: 
+- systemPassword: 
+- cpCode: 
+- taxCode: 
+- entType: 
+- orderId: 
+- resources: 
+- orgId: 
+- name: tên
+- attributes: 
+- username: 
+- phone: số liên lạc
+- projectId: 
+- key: 
+- valid: 
+- description: mô tả
+- vehicleId: 
+- message: 
+- isCancel: 
+- code: mã
+- message: 
+- information: 
+- transportId: 
+- isdn: số liên lạc
+- simSerial: 
+- serialDevice: 
+- productCode: 
+- activeDate: thời gian
+- custId: 
+- deviceType: 
+- isChangeDevice: 
+- identifier: 
+- password: 
+- isdn: số liên lạc
+- token: 
+- simSerial: 
+- serialDevice: 
+- registrationNo: 
+- sim: 
+- transportId: 
+- serviceState: trạng thái
+- total: giá trị/tiền
+- offset: 
+- limit: 
+- organizations: 
+- vehicleNo: 
+- isdn: số liên lạc
+- orderId: 
+- errorMsg: 
+- createDate: thời gian
+- username: 
+- password: 
+- phone: số liên lạc
+- id: khóa chính
+- name: tên
+- image: 
+- description: mô tả
+- orgId: 
+- orgName: 
+- groupId: 
+- projectId: 
+- attributes: 
+- adminPhone: số liên lạc
+- adminName: 
+- orgId: 
+- orgName: 
+- id: khóa chính
+- name: tên
+- adminAddress: địa chỉ
+- businessLicense: 
+- device: 
+- vehicleIdentifier: 
+- isChangeDevice: 
+- attributeType: 
+- logged: 
+- value: 
+- valueT: 
+- attributeKey: 
+- valueAsString: 
+- template: 
+- serviceStartDate: thời gian
+- serviceEndDate: thời gian
+- serviceState: trạng thái
+- imei: 
+- sim: 
+- serviceName: 
+- licensePlate: 
+- isdn: số liên lạc
+- imei: 
+- simSerial: 
+- vehicleIdentifier: 
+- isdn: số liên lạc
+- productCode: 
+- activeDate: thời gian
+- endDate: thời gian
+- requestId: 
+- createDate: thời gian
+- detailSuccess: 
+- detailTotal: giá trị/tiền
+- code: mã
+- message: 
+- valid: 
+- token: 
+- custId: 
+- amCode: 
+- productCode: 
+- isdn: số liên lạc
+- transportId: 
+- serviceEndDate: thời gian
+- token: 
+- simSerial: 
+- vehicleIdentifier: 
+- isdn: số liên lạc
+- errorCode: 
+- message: 
+- type: 
+- username: 
+- phone: số liên lạc
+- email: email
+- transportId: 
+- deviceCode: 
+- serialSim: 
+- serviceEndDate: thời gian
+- isAddPromo: 
+- token: 
+- project_id: khóa tham chiếu
+- vehicleName: 
+- transportType: 
+- vehicleType: 
+- licensePlate: 
+- orgId: 
+- vehicleRegistrationAddress: địa chỉ
+- vehicleId: 
+- plateNo: 
+- errorCode: 
+- message: 
+- type: 
+- username: 
+- phone: số liên lạc
+- email: email
+- transportId: 
+- deviceCode: 
+- serialSim: 
+- serviceEndDate: thời gian
+- remainingDays: 
+- type: 
+- queries: 
+- d: 
+- id: khóa chính
+- vehicleName: 
+- transportType: 
+- vehicleType: 
+- licensePlate: 
+- orgId: 
+- vehicleRegistrationAddress: địa chỉ
+- createdTime: thời gian
+- key: 
+- value: 
+- operator: 
+- valueType: 
+- id: khóa chính
+- name: tên
+- adminInfo: 
+- orgId: 
+- status: trạng thái
+- message: 
+- errorCode: 
+- serviceLog: 
+- requestId: 
+- fullName: 
+- user: 
+- area: 
+- requestType: 
+- account: số lượng
+- password: 
+- serviceName: 
+- status: trạng thái
+- message: 
+- errorCode: 
+- serviceName: 
+- status: trạng thái
+- message: 
+- errorCode: 
+- startDate: thời gian
+- endDate: thời gian
+- status: trạng thái
+- message: 
+- errorCode: 
+- serviceLog: 
+- requestId: 
+- organizationId: 
+- taxCode: 
+- customerName: 
+- registerAddress: địa chỉ
+- address: địa chỉ
+- customerArea: 
+- creator: 
+- hash: 
+- accountInfo: số lượng
+- serviceInfo: 
+- representative: 
+- organizationId: 
+- serviceName: 
+- orderCode: 
+- creator: 
+- hash: 
+- reason: 
+- refund: 
+- servicePackage: 
+- employeeCount: số lượng
+- packageContractPrice: giá trị/tiền
+- packageTotal: giá trị/tiền
+- exp: 
+- serviceName: 
+- contactInfo: 
+- servicePackage: 
+- countMonth: số lượng
+- availableUser: 
+- startDate: thời gian
+- endDate: thời gian
+- packageMain: 
+- packagePromotion: 
+- orderCode: 
+- licenseKey: 
+- fullName: 
+- duty: 
+- status: trạng thái
+- message: 
+- errorCode: 
+- requestId: 
+- data: 
+- requestType: 
+- contactName: 
+- contactEmail: email
+- contactPhone: số liên lạc
+- status: trạng thái
+- message: 
+- status: trạng thái
+- message: 
+- data: 
+- organizationId: 
+- serviceInfo: 
+- requestType: 
+- hash: 
+- username: 
+- password: 
+- email: email
+- employeeCount: số lượng
+- employeePrice: giá trị/tiền
+- employeeTotal: giá trị/tiền
+- initCount: số lượng
+- initPrice: giá trị/tiền
+- initTotal: giá trị/tiền
+- initFree: 
+- trainingCount: số lượng
+- trainingPrice: giá trị/tiền
+- trainingTotal: giá trị/tiền
+- trainingFree: 
+- total: giá trị/tiền
+- packPrice: giá trị/tiền
+- requestType: 
+- staffDTO: thời điểm kết thúc
+- listIsdn: số liên lạc
+- reasonId: 
+- accountNo: số lượng
+- listUploadFileDTO: thời điểm kết thúc
+- subId: 
+- isdnReceiveMoney: số liên lạc
+- staffDTO: thời điểm kết thúc
+- remainMoney: 
+- payload: 
+- key_enabled: 
+- isdnVcontact: số liên lạc
+- staffDTO: thời điểm kết thúc
+- listSubId: 
+- reasonId: 
+- payload: 
+- status_code: mã
+- identifyInfo: 
+- userNum: 
+- extensionNum: 
+- oaNum: 
+- fbNum: 
+- livetalkSiteNum: 
+- gbNum: 
+- note: ghi chú
+- contractId: 
+- access_token: 
+- success: 
+- message: 
+- email: email
+- name: tên
+- publicNumber: 
+- email: email
+- username: 
+- sip_numbers: 
+- fullName: 
+- ownerName: 
+- phone: số liên lạc
+- status: trạng thái
+- message: 
+- success: 
+- message: 
+- code: mã
+- data: 
+- priceType: giá trị/tiền
+- productOfferingId: 
+- success: 
+- key: 
+- value: 
+- faultInfo: 
+- success: 
+- checkImport: 
+- expandRow: 
+- expandRowDetail: 
+- expandRowProduct: 
+- checkCodeValueComplete: 
+- messageError: 
+- name: tên
+- optionSetCode: 
+- optionSetName: 
+- value: 
+- faultInfo: 
+- id: khóa chính
+- shopId: 
+- key: 
+- value: 
+- status: trạng thái
+- createUser: 
+- createDateTime: thời gian
+- updateUser: 
+- updateDateTime: thời gian
+- checkDisplay: 
+- lstShopExtDTO: thời điểm kết thúc
+- numberOfCustsServing: 
+- approximateTimeToWait: 
+- longitude: 
+- latitude: 
+- code: mã
+- message: 
+- expiredDate: thời gian
+- status: trạng thái
+- appCode: 
+- creatorUserName: 
+- creatorFullName: 
+- creatorPhoneNumber: số liên lạc
+- creatorEmail: email
+- taxCode: 
+- customerName: 
+- customerCode: 
+- registerAddress: địa chỉ
+- customerLead: 
+- customerLeadMobile: số liên lạc
+- customerLeadEmail: email
+- packages: 
+- startDate: thời gian
+- updateType: 
+- createTime: thời gian
+- status: trạng thái
+- requestType: 
+- orgId: 
+- orderId: 
+- servicePackage: 
+- duration: 
+- userAmount: giá trị/tiền
+- type: 
+- number: 
+- productName: 
+- usedMonth: 
+- note: ghi chú
+- lstServiceTime: thời gian
+- usedMonth: 
+- totalPayment: giá trị/tiền
+- cash: 
+- requestID: 
+- tenantID: 
+- userID: 
+- orderNo: 
+- months: 
+- modules: 
+- invoiceName: 
+- invoiceTaxCode: 
+- invoicePhone: số liên lạc
+- invoiceEmail: email
+- invoiceAddress: địa chỉ
+- totalAmt: giá trị/tiền
+- policyID: 
+- policyName: 
+- policyNote: ghi chú
+- createDataTemp: 
+- requestId: 
+- status: trạng thái
+- data: 
+- clientID: 
+- clientSecret: 
+- requestID: 
+- licenseKey: 
+- tenantID: 
+- email: email
+- organizationID: 
+- userID: 
+- userName: 
+- companyName: 
+- companyPhone: số liên lạc
+- companySize: 
+- companyTarget: 
+- orderNo: 
+- months: 
+- modules: 
+- invoiceName: 
+- invoiceTaxCode: 
+- invoicePhone: số liên lạc
+- invoiceEmail: email
+- invoiceAddress: địa chỉ
+- totalAmt: giá trị/tiền
+- policyID: 
+- policyName: 
+- policyNote: ghi chú
+- createDataTemp: 
+- clientID: 
+- clientSecret: 
+- tenantID: 
+- token: 
+- userID: 
+- userName: 
+- email: email
+- expiredOn: 
+- months: 
+- requestId: 
+- method: 
+- data: 
+- tenantID: 
+- tenantName: 
+- requestID: 
+- tenantID: 
+- requestId: 
+- errorCod: 
+- message: 
+- status: trạng thái
+- moduleID: 
+- quantity: 
+- price: giá trị/tiền
+- uMID: 
+- amt: 
+- vATPct: 
+- vATAmt: 
+- disPct: 
+- discAmt: 
+- netAmt: 
+- requestID: 
+- tenantID: 
+- userID: 
+- module: 
+- requestID: 
+- tenantID: 
+- userID: 
+- orderNo: 
+- months: 
+- startDate: thời gian
+- modules: 
+- invoiceName: 
+- invoiceTaxCode: 
+- invoicePhone: số liên lạc
+- invoiceEmail: email
+- invoiceAddress: địa chỉ
+- totalAmt: giá trị/tiền
+- policyID: 
+- policyName: 
+- policyNote: ghi chú
+- code: mã
+- message: 
+- ftthAccount: số lượng
+- orderId: 
+- status: trạng thái
+- timestamp: 
+- code: mã
+- data: 
+- message: 
+- id: khóa chính
+- username: 
+- passwd: 
+- role: 
+- status: trạng thái
+- org_id: khóa tham chiếu
+- descriptions: mô tả
+- own: 
+- source: 
+- api_token: 
+- username: 
+- password: 
+- taxCode: 
+- taxCode: 
+- amountInvoice: giá trị/tiền
+- numberInvoice: 
+- numberInvoiceUse: 
+- accountTypeId: số lượng
+- accountTypeName: số lượng
+- expireDate: thời gian
+- isTrial: 
+- numberInvoiceReset: 
+- errorCode: 
+- description: mô tả
+- data: 
+- errorCode: 
+- description: mô tả
+- data: 
+- orderId: 
+- saleTransId: 
+- createTime: thời gian
+- subscriberDTO: thời điểm kết thúc
+- lstActionAudit: 
+- orderCharacteristicList: 
+- errorCode: 
+- description: mô tả
+- existCustomer: 
+- existAccount: số lượng
+- name: tên
+- birthday: 
+- sex: 
+- address: địa chỉ
+- phone: số liên lạc
+- ownerid: 
+- cc: 
+- city: 
+- district: 
+- ward: 
+- status: trạng thái
+- msg: 
+- orderCode: 
+- type: 
+- serviceKey: 
+- domain: 
+- year: 
+- licenseKey: 
+- code: mã
+- status: trạng thái
+- msg: 
+- data: 
+- dataError: 
+- billName: 
+- billAddress: địa chỉ
+- billOwnerId: 
+- billEmail: email
+- billPhone: số liên lạc
+- email: email
+- username: 
+- dataOrder: 
+- orderCode: 
+- couponCode: 
+- dataBill: 
+- dataAccount: số lượng
+- username: 
+- password: 
+- server: 
+- fileName: 
+- directory: 
+- password: 
+- serverIp: 
+- userName: 
+- listRecord: 
+- responseCode: 
+- description: mô tả
+- electronicSignType: 
+- fileContent: 
+- recordName: 
+- recordCode: 
+- stockTotalDTO: giá trị/tiền
+- errorCode: 
+- description: mô tả
+- stockHandsetDTO: thời điểm kết thúc
+- errorCode: 
+- description: mô tả
+- prodOfferId: 
+- serial: 
+- lstIsdn: số liên lạc
+- status: trạng thái
+- prodOfferId: 
+- serial: 
+- prodOfferId: 
+- quantity: 
+- stockModelType: 
+- lstSerial: 
+- serial: 
+- prodOfferId: 
+- prodOfferCode: 
+- availableQuantity: 
+- prodOfferId: 
+- prodOfferCode: 
+- prodOfferName: 
+- prodOfferId: 
+- serial: 
+- saleDate: thời gian
+- tableName: 
+- errorMessage: 
+- productCode: 
+- fromSerial: 
+- toSerial: 
+- quantity: 
+- lstIsdn: số liên lạc
+- name: tên
+- company: 
+- packageVmarketing: 
+- locations: 
+- vtt_status: trạng thái
+- phone: số liên lạc
+- email: email
+- password: 
+- location_address: địa chỉ
+- active: 
+- location_name: tên
+- date_start_contract: 
+- date_end_contract: 
+- location_id: khóa tham chiếu
+- macs: 
+- contract_period: 
+- message: 
+- status: trạng thái
+- data: 
+- errorCode: 
+- errorMessage: 
+- data: 
+- name: tên
+- domain: 
+- taxCode: 
+- orderId: 
+- limitVehicle: 
+- startDate: thời gian
+- endDate: thời gian
+- code: mã
+- userName: 
+- passWord: 
+- name: tên
+- taxCode: 
+- limitVehicle: 
+- startDate: thời gian
+- endDate: thời gian
+- username: 
+- orderId: 
+- fieldName: 
+- errorMessage: 
+- orderId: 
+- taxCode: 
+- errorMessage: 
+- errorCode: 
+- accessToken: 
+- code: mã
+- type: 
+- name: tên
+- placeOfAddress: địa chỉ
+- scaleId: 
+- fountainHeadId: 
+- statusId: trạng thái
+- desc: 
+- type: 
+- phones: số liên lạc
+- emails: email
+- jobTax: 
+- fountainHeadId: 
+- accessToken: 
+- title: 
+- code: mã
+- amount: giá trị/tiền
+- contactId: 
+- pipelineId: 
+- stageId: 
+- desc: 
+- cf111: 
+- cf205: 
+- cf523: 
+- cf196: 
+- orderId: 
+- account: số lượng
+- ocsIsdn: số liên lạc
+- status: trạng thái
+- message: 
+- responseCode: 
+- description: mô tả
+- success: 
+- data: 
+- name: tên
+- taxCode: 
+- custType: 
+- phone: số liên lạc
+- email: email
+- address: địa chỉ
+- username: 
+- password: 
+- status: trạng thái
+- message: 
+- token: 
+- success: 
+- description: mô tả
+- responseCode: 
+- prepaidMonths: 
+- signNum: 
+- billingPackage: 
+- customerInfo: 
+- tsaSubInfo: 
+- orderId: 
+- type: 
+- account: số lượng
+- startTime: thời gian
+- expiryTime: thời gian
+- signNum: 
+- tin: 
+- username: 
+- password: 
+- errorCode: 
+- description: mô tả
+- actionType: 
+- customerId: 
+- organizationId: 
+- customerName: 
+- usernameAdmin: 
+- customerTaxCode: 
+- customerIdentifyCode: 
+- customerBusinessNo: 
+- custBusDateOfIssue: 
+- custBusPlaceOfIssue: 
+- customerAddress: địa chỉ
+- customerAreaCode: 
+- customerAreaCodeNew: 
+- customerFoundingDate: thời gian
+- customerEmail: email
+- customerPhone: số liên lạc
+- representativeName: 
+- representativeRole: 
+- representativeBirthday: 
+- representativeGender: 
+- representativeEmail: email
+- representativePhone: số liên lạc
+- representativeAddress: địa chỉ
+- representativeIdType: 
+- representativeId: 
+- repIdDateOfIssue: 
+- repIdPlaceOfIssue: 
+- registerDate: thời gian
+- orderNumber: 
+- amount: giá trị/tiền
+- brokerCode: 
+- servicePackageList: 
+- serviceType: 
+- packageCode: 
+- packageType: 
+- packageName: 
+- packagePrice: giá trị/tiền
+- feeService: giá trị/tiền
+- feeActivate: giá trị/tiền
+- packagePeriod: 
+- methodsGenUser: 
+- startString: 
+- startNumber: 
+- userCount: số lượng
+- userList: 
+- feeTotal: giá trị/tiền
+- packageServiceType: 
+- actionType: 
+- customerName: 
+- customerTaxCode: 
+- customerIndentifyCode: 
+- registerDate: thời gian
+- orderNumber: 
+- emailSignature: email
+- signer: 
+- contactTitle: 
+- amCode: 
+- telMobile: số liên lạc
+- packageType: 
+- useHub: 
+- useMonth: 
+- recommendation: 
+- packageName: 
+- packageNumber: 
+- valueOfPackage: 
+- statusCode: trạng thái
+- errMessage: 
+- data: 
+- username: 
+- errorCode: 
+- message: 
+- tranIdTracking: 
+- orderCode: 
+- status: trạng thái
+- transactionId: 
+- merchantCode: 
+- checkSum: 
+- paymentStatus: trạng thái
+- responseCode: 
+- message: 
+- isException: 
+- isExist: 
+- receiveRequestBO: 
+- reciveRequestId: 
+- id: khóa chính
+- service_code: mã
+- package_code: mã
+- number_of_stamp: 
+- number_of_month: 
+- id: khóa chính
+- service_code: mã
+- old_package_code: mã
+- new_package_code: mã
+- params: tham số
+- jsonrpc: 
+- id: khóa chính
+- result: 
+- error: 
+- success: 
+- message: 
+- data: 
+- type: 
+- code: mã
+- errCode: 
+- params: tham số
+- tax: 
+- params: tham số
+- token: 
+- params: tham số
+- success: 
+- type: 
+- message: 
+- code: mã
+- err_code: mã
+- success: 
+- message: 
+- data: 
+- type: 
+- code: mã
+- err_code: mã
+- storageExtend: 
+- tax: 
+- name: tên
+- tax: 
+- email: email
+- address: địa chỉ
+- mobile: số liên lạc
+- zip: 
+- tag: 
+- contactAddress: địa chỉ
+- internalNote: ghi chú
+- country: số lượng
+- portalCompanyName: 
+- companyIndustryId: 
+- companySizeId: 
+- params: tham số
+- emailBccsUser: email
+- name: tên
+- tax: 
+- phone: số liên lạc
+- enterpriseSize: 
+- email: email
+- image: 
+- address: địa chỉ
+- mobile: số liên lạc
+- website: 
+- zip: 
+- tag: 
+- contactAddress: địa chỉ
+- internalNote: ghi chú
+- country: số lượng
+- city: 
+- portalCompanyName: 
+- subdomain: 
+- serverId: 
+- companyIndustryId: 
+- companySizeId: 
+- employeeCount: số lượng
+- userCount: số lượng
+- ssdStorage: 
+- cpuStorage: 
+- ramStorage: 
+- language: 
+- activeDate: thời gian
+- monthValid: 
+- storageExtend: 
+- packageCode: 
+- accountingStandard: số lượng
+- params: tham số
+- success: 
+- type: 
+- message: 
+- code: mã
+- errCode: 
+- params: tham số
+- jsonrpc: 
+- id: khóa chính
+- result: 
+- error: 
+- emailBccsUser: email
+- email: email
+- packageOld: 
+- packageNew: 
+- ip: 
+- monthExtension: 
+- jsonrpc: 
+- id: khóa chính
+- result: 
+- error: 
+- params: tham số
+- monthExtension: 
+- tax: 
+- email: email
+- action: 
+- day: 
+- emailBccsUser: email
+- name: tên
+- tax: 
+- subdomain: 
+- accountingStandard: số lượng
+- email: email
+- jsonrpc: 
+- id: khóa chính
+- result: 
+- customerId: 
+- customerName: 
+- email: email
+- lstServiceTime: thời gian
+- totalPayment: giá trị/tiền
+- planSubscriptionId: 
+- code: mã
+- message: 
+- data: 
+- eventId: 
+- eventType: 
+- payload: 
+- planId: 
+- planName: 
+- planDescription: mô tả
+- planQuantity: 
+- planStartDate: thời gian
+- planDuration: 
+- planDurationUnit: 
+- planSubscriptionIds: 
+- addons: 
+- addonSubscriptionId: 
+- addonId: 
+- addonName: 
+- addonDescription: mô tả
+- addonQuantity: 
+- addonDuration: 
+- addonDurationUnit: 
+- addonStartDate: thời gian
+- addonSubscrptionIdList: 
+- isNew: 
+- autoRenew: 
+- customer: 
+- subscriptionId: 
+- packages: 
+- webHookId: 
+- webHookTimestamp: 
+- webHookSignature: 
+- actionType: 
+- taxCode: 
+- providerName: 
+- providerCode: 
+- adminEmail: email
+- adminPhone: số liên lạc
+- status: trạng thái
+- title: 
+- accessToken: 
+- tokenType: 
+- refreshToken: 
+- username: 
+- password: 
+- taxCode: 
+- walletReceive: 
+- walletAvailableLess: 
+- walletAvailableThan: 
+- expireDuration: 
+- responseCode: 
+- description: mô tả
+- lstSaleTransDTO: thời điểm kết thúc
+- accountBookBankplusRequestId: số lượng
+- description: mô tả
+- success: 
+- errorCode: 
+- extendRequestId: 
+- lstObj: 
+- lstObj2: 
+- lstSaleTransId: 
+- messageSendSms: 
+- paramsMsg: tham số
+- request: 
+- response: 
+- keyMsg: 
+- amsSaleTransId: 
+- responseCode: 
+- stockModelCode: 
+- stockModelId: 
+- amount: giá trị/tiền
+- discountAmount: số lượng
+- fromSerial: 
+- toSerial: 
+- quantity: 
+- licenseKey: 
+- telecomServiceId: số liên lạc
+- priceType: giá trị/tiền
+- baseMessage: 
+- description: mô tả
+- cssSelectorForFocus: 
+- description2: mô tả
+- elementStyleClass: 
+- enableLink: 
+- errorCode: 
+- keyMsg: 
+- message: 
+- outputObject: 
+- outputObject2: 
+- paramsMsg: tham số
+- system: 
+- lstRecordType: 
+- responseCode: 
+- lst: 
+- responseCode: 
+- lstActionProfile: 
+- exits: 
+- id: khóa chính
+- services: 
+- package_code: mã
+- begin_at: 
+- expired_at: 
+- status: trạng thái
+- status: trạng thái
+- message: 
+- data: 
+- status: trạng thái
+- message: 
+- data: 
+- code: mã
+- name: tên
+- status: trạng thái
+- errorCode: 
+- description: mô tả
+- errMessage: 
+- transId: 
